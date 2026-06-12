@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="500"
+   height="500"
+   viewBox="0 0 500 500"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <!-- Círculo externo azul marinho -->
+  <circle
+     style="fill:#002b5c;fill-opacity:1;stroke:none;stroke-width:5"
+     id="circle-exterior"
+     cx="250"
+     cy="250"
+     r="240" />
+  <!-- Círculo interno branco -->
+  <circle
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5"
+     id="circle-interior"
+     cx="250"
+     cy="250"
+     r="190" />
+  <!-- Símbolos de código amarelo/dourado -->
+  <!-- Símbolo "<" -->
+  <path
+     style="fill:#ffc72c;fill-opacity:1;stroke:none;stroke-width:5"
+     d="m 180,250 30,-30 10,10 -20,20 20,20 -10,10 z"
+     id="simbolo-menor" />
+  <!-- Barra central "/" -->
+  <rect
+     style="fill:#ffc72c;fill-opacity:1;stroke:none;stroke-width:5"
+     id="barra-central"
+     x="245"
+     y="170"
+     width="15"
+     height="160"
+     rx="7.5"
+     ry="7.5"
+     transform="rotate(15, 250, 250)" />
+  <!-- Símbolo ">" -->
+  <path
+     style="fill:#ffc72c;fill-opacity:1;stroke:none;stroke-width:5"
+     d="m 320,250 -30,-30 -10,10 20,20 -20,20 10,10 z"
+     id="simbolo-maior" />
+</svg>
