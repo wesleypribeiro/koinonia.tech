@@ -4,7 +4,11 @@ const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
 
-  basePath: '/koinonia.tech'
+  basePath: '/koinonia.tech',
+
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
