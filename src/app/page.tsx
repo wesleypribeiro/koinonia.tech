@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Code, Cpu, ShieldCheck, Target, Eye, Sparkles, Handshake, Gauge, Mail, MessageCircle, Clock } from "lucide-react";
+import { ArrowRight, Code, Cpu, ShieldCheck, Target, Eye, Sparkles, Handshake, Gauge, Mail, Clock } from "lucide-react";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
 import ServiceCard from "@/components/ServiceCard";
@@ -37,16 +37,16 @@ export default function Home() {
                   </span>
                   [ status: ready_to_build ]
                 </div>
-                
+
                 <h1 className="text-foreground tracking-tight text-balance">
                   {siteConfig.slogan}
                 </h1>
-                
+
                 <p className="mt-6 max-w-2xl text-lg text-muted-fg sm:text-xl leading-relaxed text-pretty">
-                  Desenvolvimento sob medida para empresas que precisam de sistemas sólidos, 
+                  Desenvolvimento sob medida para empresas que precisam de sistemas sólidos,
                   automações inteligentes e presença digital de alto nível.
                 </p>
-                
+
                 <div className="mt-10 flex flex-wrap items-center gap-4">
                   <Link
                     href="#contato"
@@ -86,7 +86,7 @@ export default function Home() {
             </div>
           </div>
         </Container>
-        
+
         {/* Divider / Tech Stack Marquee */}
         <div className="mt-24 border-y border-border bg-muted/30 py-6">
           <Container>
@@ -115,7 +115,7 @@ export default function Home() {
               let spanClass = "";
               if (i === 0) spanClass = "md:col-span-2 lg:col-span-2";
               else if (i === 3) spanClass = "md:col-span-2 lg:col-span-1";
-              
+
               return (
                 <Reveal key={service.slug} delay={i * 80} className={`h-full ${spanClass}`}>
                   <ServiceCard service={service} detailed={true} />
@@ -163,11 +163,11 @@ export default function Home() {
               <div className="tech-tag inline-block mb-4">Sobre Nós</div>
               <h2 className="text-foreground tracking-tight">Por que a {siteConfig.name}?</h2>
               <p className="mt-5 text-lg text-muted-fg leading-relaxed text-pretty">
-                Nossa missão é entregar soluções de software que geram valor real para nossos clientes, 
-                unindo tecnologia, propósito e extrema atenção aos detalhes. Não entregamos apenas código, 
+                Nossa missão é entregar soluções de software que geram valor real para nossos clientes,
+                unindo tecnologia, propósito e extrema atenção aos detalhes. Não entregamos apenas código,
                 entregamos parceira e resultados reais.
               </p>
-              
+
               <div className="mt-8 flex flex-col gap-6">
                 {differentials.map((d, i) => (
                   <div key={d.title} className="flex gap-4 items-start">
@@ -187,7 +187,7 @@ export default function Home() {
               <div className="relative rounded-2xl bg-card border border-border p-8 h-full flex flex-col justify-center overflow-hidden">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 left-0 w-40 h-40 bg-accent/10 rounded-full blur-3xl"></div>
-                
+
                 <h3 className="text-xl font-semibold mb-6">Nossos Valores Fundamentais</h3>
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3">
