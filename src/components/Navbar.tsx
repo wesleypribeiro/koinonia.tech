@@ -28,7 +28,7 @@ export default function Navbar() {
 
   // Em uma landing page, o conceito de "active" via pathname não funciona bem para hashes sem um scroll spy.
   // Vamos manter simples: não destacaremos o ativo baseado na URL atual.
-  const isActive = (href: string) => false;
+  const isActive = () => false;
 
   return (
     <header className="sticky top-0 z-50 border-b border-border glass-nav">
@@ -38,15 +38,14 @@ export default function Navbar() {
         {/* Navegação desktop */}
         <ul className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => {
-            const active = isActive(item.href);
+            const active = isActive();
             return (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   aria-current={active ? "page" : undefined}
-                  className={`text-base font-medium transition-colors hover:text-primary ${
-                    active ? "text-primary" : "text-foreground"
-                  }`}
+                  className={`text-base font-medium transition-colors hover:text-primary ${active ? "text-primary" : "text-foreground"
+                    }`}
                 >
                   {item.label}
                 </Link>
@@ -81,15 +80,14 @@ export default function Navbar() {
           className="border-t border-border bg-background px-4 py-3 sm:px-6 md:hidden"
         >
           {navItems.map((item) => {
-            const active = isActive(item.href);
+            const active = isActive();
             return (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={`block rounded-md px-3 py-2.5 text-base font-medium transition-colors ${
-                    active ? "bg-muted text-primary" : "text-foreground hover:bg-muted"
-                  }`}
+                  className={`block rounded-md px-3 py-2.5 text-base font-medium transition-colors ${active ? "bg-muted text-primary" : "text-foreground hover:bg-muted"
+                    }`}
                 >
                   {item.label}
                 </Link>

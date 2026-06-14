@@ -169,7 +169,7 @@ export default function Home() {
               </p>
 
               <div className="mt-8 flex flex-col gap-6">
-                {differentials.map((d, i) => (
+                {differentials.map((d) => (
                   <div key={d.title} className="flex gap-4 items-start">
                     <div className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <d.icon className="h-5 w-5" aria-hidden />
