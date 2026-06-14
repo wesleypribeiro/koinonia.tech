@@ -11,7 +11,7 @@ export default function Brand({ className = "" }: { className?: string }) {
       aria-label={`${siteConfig.name} — Início`}
       className={`flex items-center gap-2.5 ${className}`}
     >
-      <Image src="/logo_only.svg" alt="" aria-hidden width={40} height={40} className="h-9 w-9" />
+      <Image src={`${process.env.PAGES_BASE_PATH || ''}/logo_only.svg`} alt="" aria-hidden width={40} height={40} className="h-9 w-9" />
       <Wordmark className="text-lg sm:text-xl" />
     </Link>
   );

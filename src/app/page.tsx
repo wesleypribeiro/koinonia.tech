@@ -15,7 +15,7 @@ export default function Home() {
       <section className="relative overflow-hidden">
         {/* Decorativo: visível só em telas grandes e no tema claro */}
         <Image
-          src="/bg.png"
+          src={`${process.env.PAGES_BASE_PATH || ''}/bg.png`}
           alt=""
           aria-hidden
           width={1184}
@@ -50,7 +50,7 @@ export default function Home() {
 
           <div className="order-1 flex justify-center md:order-2 md:justify-end">
             <Image
-              src="/logo_only.svg"
+              src={`${process.env.PAGES_BASE_PATH || ''}/logo_only.svg`}
               alt=""
               aria-hidden
               width={420}
