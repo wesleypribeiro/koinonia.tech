@@ -1,79 +1,181 @@
 @import "tailwindcss";
 
-/* Dark mode por classe (.dark no <html>) em vez de prefers-color-scheme */
 @custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --muted: #f4f6f9;
-  --muted-fg: #5b6675;
-  --border: #e5e9f0;
-  --card: #ffffff;
-  /* Primária: navy da marca no tema claro */
-  --primary: #002b5c;
-  --primary-hover: #012a4f;
-  --primary-fg: #ffffff;
-}
-
-.dark {
-  --background: #0b1220;
-  --foreground: #e8edf4;
-  --muted: #111a2b;
-  --muted-fg: #9fb0c3;
-  --border: #1e2a3d;
-  --card: #0f1828;
-  /* Primária clareada no tema escuro (legível sobre fundo escuro) */
-  --primary: #5b9bd5;
-  --primary-hover: #7baddf;
-  --primary-fg: #0b1220;
-}
-
 @theme {
-  /* Neutros (mudam entre temas via variáveis acima) */
+  /* Neutros */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-muted-fg: var(--muted-fg);
   --color-border: var(--border);
   --color-card: var(--card);
+  --color-card-border: var(--card-border);
 
-  /* Primária: adapta ao tema via variáveis acima */
+  /* Brand Colors */
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
   --color-primary-fg: var(--primary-fg);
-  /* Accent dourado: fixo nos dois temas */
-  --color-accent: #ffc72c;
-  --color-accent-hover: #e6b324;
-  --color-accent-fg: #1a1a1a;
+  
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-fg: var(--accent-fg);
 
+  /* Fonts */
   --font-sans: var(--font-inter), var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
+:root {
+  /* Light Mode (Clean, Minimal, High Contrast) */
+  --background: #fcfcfc;
+  --foreground: #09090b;
+  
+  --muted: #f4f4f5;
+  --muted-fg: #52525b;
+  
+  --border: #e4e4e7;
+  --card: #ffffff;
+  --card-border: #f4f4f5;
+
+  /* Sky Blue / Cobalt (Tech vibe) */
+  --primary: #0284c7;
+  --primary-hover: #0369a1;
+  --primary-fg: #ffffff;
+
+  /* Tech Gold / Amber */
+  --accent: #f59e0b;
+  --accent-hover: #d97706;
+  --accent-fg: #ffffff;
 }
 
-h1 {
-  font-size: clamp(2.25rem, 6vw, 3.4rem);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+.dark {
+  /* Dark Mode (Deep Space / Professional Tech) */
+  --background: #050505;
+  --foreground: #fafafa;
+  
+  --muted: #18181b;
+  --muted-fg: #a1a1aa;
+  
+  --border: #27272a;
+  --card: #0a0a0a;
+  --card-border: #18181b;
+
+  /* Bright Sky Blue (Pop on dark background) */
+  --primary: #38bdf8;
+  --primary-hover: #7dd3fc;
+  --primary-fg: #050505;
+
+  /* Tech Gold / Amber */
+  --accent: #fbbf24;
+  --accent-hover: #fcd34d;
+  --accent-fg: #050505;
 }
 
-h2 {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+/* Base Styles & Web Guidelines Fixes */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; /* Avoid unwanted horizontal scrollbars */
+  }
+
+  /* Accessible Focus States - Web Interface Guidelines */
+  *:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  
+  /* Disable outline on normal focus (mouse click) if focus-visible is supported */
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance; /* Prevents typographic widows */
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
 }
 
-h3 {
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-  font-weight: 600;
-  line-height: 1.3;
+/* Custom Utilities for Glassmorphism & Glow */
+@layer utilities {
+  .glass {
+    background: color-mix(in srgb, var(--card) 60%, transparent);
+    backdrop-filter: blur(12px);
+    border: 1px solid color-mix(in srgb, var(--border) 40%, transparent);
+  }
+  
+  .glass-nav {
+    background: color-mix(in srgb, var(--background) 70%, transparent);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+  }
+
+  .glow-bg {
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, color-mix(in srgb, var(--primary) 15%, transparent) 0%, transparent 60%);
+    top: -20vw;
+    right: -20vw;
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(60px);
+  }
+
+  .bento-card {
+    background-color: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .bento-card:hover {
+    border-color: color-mix(in srgb, var(--primary) 40%, var(--border));
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px -10px color-mix(in srgb, var(--primary) 10%, transparent);
+  }
+  
+  /* Feature tags (e.g. for services) */
+  .tech-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    background-color: var(--muted);
+    color: var(--muted-fg);
+    border: 1px solid var(--border);
+  }
 }

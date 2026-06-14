@@ -4,13 +4,14 @@ type ServiceCardProps = {
   service: Service;
   /** Mostra a lista de bullets (usado na página de serviços). */
   detailed?: boolean;
+  className?: string;
 };
 
-export default function ServiceCard({ service, detailed = false }: ServiceCardProps) {
+export default function ServiceCard({ service, detailed = false, className = "" }: ServiceCardProps) {
   const { icon: Icon, title, short, description, bullets } = service;
 
   return (
-    <div className="flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-shadow hover:shadow-lg">
+    <div className={`bento-card flex h-full flex-col p-6 lg:p-8 ${className}`}>
       <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
         <Icon className="h-6 w-6" aria-hidden />
       </div>

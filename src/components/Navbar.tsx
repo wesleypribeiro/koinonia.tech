@@ -26,11 +26,12 @@ export default function Navbar() {
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  // Em uma landing page, o conceito de "active" via pathname não funciona bem para hashes sem um scroll spy.
+  // Vamos manter simples: não destacaremos o ativo baseado na URL atual.
+  const isActive = (href: string) => false;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-border glass-nav">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Brand />
 
@@ -85,7 +86,7 @@ export default function Navbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  aria-current={active ? "page" : undefined}
+                  onClick={() => setOpen(false)}
                   className={`block rounded-md px-3 py-2.5 text-base font-medium transition-colors ${
                     active ? "bg-muted text-primary" : "text-foreground hover:bg-muted"
                   }`}
