@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Code, Cpu, ShieldCheck, Target, Eye, Sparkles, Handshake, Gauge, Mail, Clock } from "lucide-react";
+import { ArrowRight, Code, Cpu, ShieldCheck, Target, Eye, Sparkles, Handshake, Gauge, Mail, Clock, ChevronDown } from "lucide-react";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
+import Magnetic from "@/components/Magnetic";
 import ServiceCard from "@/components/ServiceCard";
 import ProjectCard from "@/components/ProjectCard";
 import ContactForm from "@/components/ContactForm";
@@ -21,66 +22,94 @@ const differentials = [
 export default function Home() {
   return (
     <>
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section - Massive Typographic Layout & Logo */}
       <section className="relative overflow-hidden pt-16 pb-24 lg:pt-28 lg:pb-32">
-        <div className="glow-bg" />
+        {/* Ambient Mouse Spotlight */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full bg-primary/10 blur-[120px] mix-blend-screen animate-pulse" style={{ animationDuration: '8s' }} />
+        </div>
 
-        <Container className="relative">
+        <Container className="relative z-10">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
             {/* Texto principal */}
             <div className="max-w-3xl">
-              <Reveal delay={0}>
-                <div className="inline-flex items-center gap-2 px-3 py-1 mb-8 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-mono tracking-wider uppercase">
+              <Reveal delay={0} direction="up">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-8 bg-transparent border border-primary text-primary text-xs font-mono tracking-[0.2em] uppercase">
                   <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full bg-primary opacity-75"></span>
+                    <span className="relative inline-flex h-2 w-2 bg-primary"></span>
                   </span>
-                  [ status: ready_to_build ]
+                  {siteConfig.name}
                 </div>
+              </Reveal>
 
-                <h1 className="text-foreground tracking-tight text-balance">
-                  {siteConfig.slogan}
-                </h1>
+              {/* Split Text Reveal logic */}
+              <div className="flex flex-col gap-2">
+                <Reveal delay={150} direction="up" fade>
+                  <h1 className="text-foreground tracking-tighter uppercase leading-[0.9] w-full">
+                    TECNOLOGIA
+                  </h1>
+                </Reveal>
+                <Reveal delay={300} direction="up" fade>
+                  <h1 className="text-foreground tracking-tighter uppercase leading-[0.9] text-muted-fg flex items-center gap-4 w-full">
+                    COM
+                    <span className="h-[2px] bg-primary flex-1 hidden md:block opacity-50"></span>
+                  </h1>
+                </Reveal>
+                <Reveal delay={450} direction="up" fade>
+                  <h1 className="text-primary tracking-tighter uppercase leading-[0.9] w-full">
+                    PROPÓSITO.
+                  </h1>
+                </Reveal>
+              </div>
 
-                <p className="mt-6 max-w-2xl text-lg text-muted-fg sm:text-xl leading-relaxed text-pretty">
+              <Reveal delay={600} direction="up">
+                <p className="mt-8 max-w-2xl text-lg text-muted-fg sm:text-xl font-mono leading-relaxed text-pretty border-l border-primary pl-6">
                   Desenvolvimento sob medida para empresas que precisam de sistemas sólidos,
                   automações inteligentes e presença digital de alto nível.
                 </p>
+              </Reveal>
 
-                <div className="mt-10 flex flex-wrap items-center gap-4">
-                  <Link
-                    href="#contato"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-8 py-4 font-semibold text-accent-fg transition-all hover:bg-accent-hover hover:scale-[1.02] active:scale-[0.98]"
-                  >
-                    Iniciar Projeto
-                    <ArrowRight className="h-5 w-5" aria-hidden="true" />
-                  </Link>
-                  <Link
-                    href="#servicos"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-8 py-4 font-medium text-foreground transition-colors hover:bg-muted focus-visible:ring-2"
-                  >
-                    Explorar Serviços
-                  </Link>
+              <Reveal delay={750} direction="up">
+                <div className="mt-12 flex flex-wrap items-center gap-4">
+                  <Magnetic>
+                    <Link
+                      href="#contato"
+                      className="inline-flex items-center justify-center gap-3 bg-primary px-8 py-4 font-bold text-primary-fg uppercase tracking-widest text-sm transition-all hover:bg-primary-hover shadow-[0_0_20px_rgba(var(--primary),0.2)]"
+                    >
+                      Iniciar Projeto
+                      <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                    </Link>
+                  </Magnetic>
+                  <Magnetic>
+                    <Link
+                      href="#servicos"
+                      className="inline-flex items-center justify-center gap-2 px-8 py-4 font-mono text-sm uppercase tracking-widest text-foreground transition-colors hover:text-primary"
+                    >
+                      Explorar Serviços
+                      <ChevronDown className="h-4 w-4" />
+                    </Link>
+                  </Magnetic>
                 </div>
               </Reveal>
             </div>
 
             {/* Imagem / Logo abstrata */}
             <div className="flex justify-center lg:justify-end">
-              <Reveal delay={200}>
+              <Reveal delay={600} direction="left">
                 <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px]">
                   <div className="absolute inset-0 rounded-full border border-border opacity-50 border-dashed animate-spin" style={{ animationDuration: '30s' }}></div>
                   <div className="absolute inset-8 rounded-full border border-primary/30 backdrop-blur-md bg-card/20"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <Magnetic className="absolute inset-0 flex items-center justify-center cursor-pointer">
                     <Image
                       src="/logo_only.svg"
                       alt="Logo Koinonia Tech"
                       width={200}
                       height={200}
                       priority
-                      className="w-32 h-32 sm:w-40 sm:h-40 drop-shadow-2xl"
+                      className="w-32 h-32 sm:w-40 sm:h-40 drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                     />
-                  </div>
+                  </Magnetic>
                 </div>
               </Reveal>
             </div>
@@ -88,14 +117,25 @@ export default function Home() {
         </Container>
 
         {/* Divider / Tech Stack Marquee */}
-        <div className="mt-24 border-y border-border bg-muted/30 py-6">
-          <Container>
-            <div className="flex flex-wrap justify-center gap-8 md:gap-16 text-muted-fg font-mono text-sm uppercase tracking-widest opacity-80">
-              <div className="flex items-center gap-2"><Code className="w-5 h-5" /> Modern Stack</div>
-              <div className="flex items-center gap-2"><Cpu className="w-5 h-5" /> High Performance</div>
-              <div className="flex items-center gap-2"><ShieldCheck className="w-5 h-5" /> Secure by Design</div>
-            </div>
-          </Container>
+        <div className="mt-24 border-y border-border bg-card/50 py-4 overflow-hidden whitespace-nowrap z-10 flex backdrop-blur-sm">
+          <div className="flex gap-16 font-mono text-xs uppercase tracking-[0.2em] text-muted-fg animate-marquee opacity-80 min-w-max pr-16">
+            <span className="flex items-center gap-2"><Code className="w-4 h-4 text-primary" /> Engenharia de Software</span>
+            <span className="flex items-center gap-2"><Cpu className="w-4 h-4 text-primary" /> Alta Performance</span>
+            <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-primary" /> Segurança</span>
+            <span className="flex items-center gap-2"><Sparkles className="w-4 h-4 text-primary" /> UI/UX Design</span>
+            <span className="flex items-center gap-2"><Code className="w-4 h-4 text-primary" /> Engenharia de Software</span>
+            <span className="flex items-center gap-2"><Cpu className="w-4 h-4 text-primary" /> Alta Performance</span>
+            <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-primary" /> Segurança</span>
+          </div>
+          <div className="flex gap-16 font-mono text-xs uppercase tracking-[0.2em] text-muted-fg animate-marquee opacity-80 min-w-max pr-16" aria-hidden="true">
+            <span className="flex items-center gap-2"><Code className="w-4 h-4 text-primary" /> Engenharia de Software</span>
+            <span className="flex items-center gap-2"><Cpu className="w-4 h-4 text-primary" /> Alta Performance</span>
+            <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-primary" /> Segurança</span>
+            <span className="flex items-center gap-2"><Sparkles className="w-4 h-4 text-primary" /> UI/UX Design</span>
+            <span className="flex items-center gap-2"><Code className="w-4 h-4 text-primary" /> Engenharia de Software</span>
+            <span className="flex items-center gap-2"><Cpu className="w-4 h-4 text-primary" /> Alta Performance</span>
+            <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-primary" /> Segurança</span>
+          </div>
         </div>
       </section>
 
@@ -187,9 +227,12 @@ export default function Home() {
               <div className="relative rounded-2xl bg-card border border-border p-8 h-full flex flex-col justify-center overflow-hidden">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 left-0 w-40 h-40 bg-accent/10 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-8 -right-8 opacity-[0.03] text-foreground pointer-events-none">
+                  <Target className="w-64 h-64" />
+                </div>
 
-                <h3 className="text-xl font-semibold mb-6">Nossos Valores Fundamentais</h3>
-                <ul className="space-y-4">
+                <h3 className="text-2xl font-bold mb-8 relative z-10">Nossos Valores Fundamentais</h3>
+                <ul className="space-y-6 text-lg relative z-10">
                   <li className="flex items-center gap-3">
                     <ShieldCheck className="w-5 h-5 text-primary" />
                     <span><strong>Qualidade:</strong> Código limpo, testado e construído para durar.</span>
@@ -232,20 +275,23 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={200} className="flex flex-col gap-8">
-              <div className="bento-card p-6 sm:p-8 bg-primary text-primary-fg border-none">
-                <h3 className="text-xl font-semibold mb-2">Contato Rápido</h3>
-                <p className="text-primary-fg/80 mb-6">
+              <div className="rounded-2xl p-6 sm:p-8 bg-primary text-primary-fg shadow-lg shadow-primary/20 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+                <h3 className="text-xl font-semibold mb-2 relative z-10">Contato Rápido</h3>
+                <p className="text-primary-fg/90 mb-6 relative z-10">
                   Prefere falar agora? O WhatsApp é o caminho mais rápido para alinhar ideias.
                 </p>
-                <a
-                  href={siteConfig.whatsapp.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-6 py-3 font-medium text-white transition-opacity hover:opacity-90 shadow-lg"
-                >
-                  <WhatsAppIcon className="h-5 w-5" />
-                  Falar no WhatsApp
-                </a>
+                <Magnetic>
+                  <a
+                    href={siteConfig.whatsapp.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-6 py-3 font-medium text-white transition-all hover:scale-105 hover:opacity-90 shadow-lg"
+                  >
+                    <WhatsAppIcon className="h-5 w-5" />
+                    Falar no WhatsApp
+                  </a>
+                </Magnetic>
               </div>
 
               <div className="bento-card p-6 sm:p-8">

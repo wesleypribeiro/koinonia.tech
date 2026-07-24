@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -17,6 +17,11 @@ const geistMono = Geist_Mono({
 
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space",
   subsets: ["latin"],
 });
 
@@ -67,7 +72,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body
-        className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
+        className={`${inter.variable} ${spaceGrotesk.variable} ${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased bg-background text-foreground`}
       >
         <Navbar />
         <main className="flex-1">{children}</main>
