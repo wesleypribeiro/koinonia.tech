@@ -202,7 +202,7 @@ export default function BioPage() {
 
             <div className="grid grid-cols-2 gap-4">
               {projects.slice(0, 6).map((project, i) => (
-                <Reveal key={project.title} delay={800 + (i * 100)} scale>
+                <Reveal key={project.title} delay={800 + (i * 100)} direction="up">
                   <a
                     href={project.url || `${siteConfig.url}/#portfolio`}
                     target="_blank"
