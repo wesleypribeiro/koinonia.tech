@@ -45,7 +45,6 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — Tecnologia com propósito`,
     description: siteConfig.description,
   },
-  icons: { icon: "/favicon.ico" },
 };
 
 // Roda antes do primeiro paint para evitar flash do tema (FOUC).
