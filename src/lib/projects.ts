@@ -16,22 +16,4 @@ export const projects: Project[] = [
     image: "/projetos/cultura-americana-school.png",
     url: "https://culturaamericanaschool.com.br/",
   },
-  {
-    title: "Plataforma de Gestão",
-    category: "Sistema sob medida",
-    description:
-      "Sistema web para automação de processos internos, com painel administrativo e relatórios em tempo real.",
-  },
-  {
-    title: "Site Institucional Corporativo",
-    category: "Site institucional",
-    description:
-      "Presença digital responsiva e otimizada para SEO, com foco em credibilidade e geração de contatos.",
-  },
-  {
-    title: "Loja Virtual",
-    category: "E-commerce",
-    description:
-      "E-commerce completo com integração de pagamentos, gestão de estoque e checkout otimizado.",
-  },
 ];

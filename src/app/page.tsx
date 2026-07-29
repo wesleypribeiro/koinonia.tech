@@ -170,7 +170,7 @@ export default function Home() {
       <section id="portfolio" className="py-20 sm:py-28 bg-muted/30 border-y border-border scroll-mt-20">
         <Container>
           <Reveal className="max-w-3xl mx-auto text-center">
-            <div className="tech-tag inline-block mb-4">Projetos em Destaque</div>
+            <div className="tech-tag inline-block mb-4">Projeto em Destaque</div>
             <h2 className="text-foreground tracking-tight">Portfólio</h2>
             <p className="mt-5 text-lg text-muted-fg leading-relaxed">
               Alguns dos trabalhos de excelência que já desenvolvemos.
@@ -195,6 +195,40 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* 3.5 Soluções que podemos desenvolver */}
+      <section className="py-20 sm:py-28 border-b border-border">
+        <Container>
+          <Reveal className="max-w-3xl mx-auto text-center mb-16">
+            <div className="tech-tag inline-block mb-4">Soluções que podemos desenvolver</div>
+            <h2 className="text-foreground tracking-tight text-3xl sm:text-4xl">Exemplos de Soluções</h2>
+            <p className="mt-5 text-lg text-muted-fg leading-relaxed">
+              Desenvolvemos diversos tipos de sistemas para acelerar o seu negócio.
+            </p>
+          </Reveal>
+          
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <Reveal delay={0} className="h-full">
+              <div className="bento-card p-6 sm:p-8 h-full flex flex-col justify-center text-center">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Plataformas de gestão</h3>
+                <p className="text-muted-fg">Automação de processos internos, painéis administrativos e relatórios em tempo real.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={80} className="h-full">
+              <div className="bento-card p-6 sm:p-8 h-full flex flex-col justify-center text-center">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Sites institucionais</h3>
+                <p className="text-muted-fg">Presença digital responsiva, otimizada para SEO e voltada à geração de contatos.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={160} className="h-full sm:col-span-2 lg:col-span-1">
+              <div className="bento-card p-6 sm:p-8 h-full flex flex-col justify-center text-center">
+                <h3 className="text-xl font-bold mb-3 text-foreground">Lojas virtuais</h3>
+                <p className="text-muted-fg">E-commerces completos, integrados e otimizados para maximizar as vendas.</p>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
       {/* 4. Sobre & Diferenciais */}
       <section id="sobre" className="py-20 sm:py-28 scroll-mt-20">
         <Container>
@@ -204,8 +238,8 @@ export default function Home() {
               <h2 className="text-foreground tracking-tight">Por que a {siteConfig.name}?</h2>
               <p className="mt-5 text-lg text-muted-fg leading-relaxed text-pretty">
                 Nossa missão é entregar soluções de software que geram valor real para nossos clientes,
-                unindo tecnologia, propósito e extrema atenção aos detalhes. Não entregamos apenas código,
-                entregamos parceira e resultados reais.
+                unindo tecnologia, propósito e extrema atenção aos detalhes. Não entregamos apenas código.
+                Entregamos parceria e resultados reais.
               </p>
 
               <div className="mt-8 flex flex-col gap-6">
@@ -268,7 +302,7 @@ export default function Home() {
               <div className="bento-card p-6 sm:p-8 h-full">
                 <h3 className="text-2xl text-foreground font-semibold">Envie uma mensagem</h3>
                 <p className="mt-2 text-sm text-muted-fg mb-6">
-                  Preencha o formulário e abriremos o seu e-mail com tudo pronto para enviar.
+                  Preencha o formulário e conte um pouco sobre o seu projeto. Entraremos em contato para entender como podemos ajudar.
                 </p>
                 <ContactForm />
               </div>
