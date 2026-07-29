@@ -58,7 +58,7 @@ export default function Home() {
                 </Reveal>
                 <Reveal delay={450} direction="up" fade>
                   <h1 className="text-primary tracking-tighter uppercase leading-[0.9] w-full">
-                    PROPÓSITO.
+                    PROPÓSITO
                   </h1>
                 </Reveal>
               </div>
@@ -102,12 +102,12 @@ export default function Home() {
                   <div className="absolute inset-8 rounded-full border border-primary/30 backdrop-blur-md bg-card/20"></div>
                   <Magnetic className="absolute inset-0 flex items-center justify-center cursor-pointer">
                     <Image
-                      src="/logo_only.svg"
-                      alt="Logo Koinonia Tech"
-                      width={200}
-                      height={200}
+                      src="/branding/simbolo_color.svg"
+                      alt=""
+                      width={400}
+                      height={400}
                       priority
-                      className="w-32 h-32 sm:w-40 sm:h-40 drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                      className="w-[clamp(220px,32vw,480px)] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                     />
                   </Magnetic>
                 </div>

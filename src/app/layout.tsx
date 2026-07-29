@@ -45,6 +45,13 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — Tecnologia com propósito`,
     description: siteConfig.description,
   },
+  icons: {
+    icon: [
+      { url: "/branding/favicon.ico", sizes: "any" },
+      { url: "/branding/favicon_32x32.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/branding/favicon_192x192.png",
+  },
 };
 
 // Roda antes do primeiro paint para evitar flash do tema (FOUC).

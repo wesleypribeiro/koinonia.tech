@@ -28,49 +28,53 @@
 }
 
 :root {
-  /* Light Mode (Clean, Minimal, High Contrast) */
-  --background: #fcfcfc;
-  --foreground: #09090b;
+  /* Brand Colors (Nova Identidade) */
+  --brand-primary: #10B39A;
+  --brand-primary-dark: #0A7E6E;
+  --brand-graphite: #1F2933;
+  --brand-background: #F2F4F5;
+  --brand-white: #FFFFFF;
+  --brand-support: #FFB98A;
+
+  /* Light Mode */
+  --background: var(--brand-background);
+  --foreground: var(--brand-graphite);
   
-  --muted: #f4f4f5;
+  --muted: #e4e4e7;
   --muted-fg: #52525b;
   
-  --border: #e4e4e7;
-  --card: #ffffff;
-  --card-border: #f4f4f5;
+  --border: #d4d4d8;
+  --card: var(--brand-white);
+  --card-border: #e4e4e7;
 
-  /* Sky Blue / Cobalt (Tech vibe) */
-  --primary: #0284c7;
-  --primary-hover: #0369a1;
-  --primary-fg: #ffffff;
+  --primary: var(--brand-primary);
+  --primary-hover: var(--brand-primary-dark);
+  --primary-fg: var(--brand-white);
 
-  /* Tech Gold / Amber */
-  --accent: #f59e0b;
-  --accent-hover: #d97706;
-  --accent-fg: #ffffff;
+  --accent: var(--brand-support);
+  --accent-hover: #e0a379;
+  --accent-fg: var(--brand-graphite);
 }
 
 .dark {
-  /* Dark Mode (Deep Space / Professional Tech) */
-  --background: #050505;
-  --foreground: #fafafa;
+  /* Dark Mode */
+  --background: var(--brand-graphite);
+  --foreground: var(--brand-white);
   
-  --muted: #18181b;
-  --muted-fg: #a1a1aa;
+  --muted: #2d3748;
+  --muted-fg: #a0aec0;
   
-  --border: #27272a;
-  --card: #0a0a0a;
-  --card-border: #18181b;
+  --border: #4a5568;
+  --card: #151c23;
+  --card-border: #2d3748;
 
-  /* Bright Sky Blue (Pop on dark background) */
-  --primary: #38bdf8;
-  --primary-hover: #7dd3fc;
-  --primary-fg: #050505;
+  --primary: var(--brand-primary);
+  --primary-hover: #14d6b8;
+  --primary-fg: var(--brand-graphite);
 
-  /* Tech Gold / Amber */
-  --accent: #fbbf24;
-  --accent-hover: #fcd34d;
-  --accent-fg: #050505;
+  --accent: var(--brand-support);
+  --accent-hover: #ffc9a3;
+  --accent-fg: var(--brand-graphite);
 }
 
 /* Base Styles & Web Guidelines Fixes */

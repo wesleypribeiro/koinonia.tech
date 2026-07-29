@@ -1,0 +1,32 @@
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520">
+          <g transform="translate(30,10) scale(1.0)">
+      
+        <defs>
+          <linearGradient id="brandGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0A7E6E"/>
+            <stop offset="100%" stop-color="#10B39A"/>
+          </linearGradient>
+        </defs>
+        
+      
+      <g fill="none" stroke="url(#brandGradient)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M 170 135 L 170 355"/>
+        <path d="M 170 245 L 325 125"/>
+        <path d="M 170 245 L 345 345"/>
+        <path d="M 125 90 A 185 185 0 0 0 112 390" stroke-width="14"/>
+        <path d="M 383 162 A 180 180 0 0 1 390 325" stroke-width="14"/>
+      </g>
+      <g fill="#FFFFFF" stroke="url(#brandGradient)" stroke-width="20">
+        <circle cx="170" cy="105" r="27"/>
+        <circle cx="170" cy="390" r="27"/>
+        <circle cx="350" cy="105" r="27"/>
+        <circle cx="370" cy="365" r="27"/>
+      </g>
+    </g>
+          <text x="560" y="220" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif"
+                font-size="150" font-weight="700" fill="#1F2933">Koinonia</text>
+          <text x="565" y="375" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif"
+                font-size="135" font-weight="600" fill="#10B39A">Tech</text>
+        </svg>
+        

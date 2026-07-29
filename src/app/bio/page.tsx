@@ -116,7 +116,7 @@ export default function BioPage() {
             <Magnetic className="inline-block">
               <Link href="/" className="relative flex items-center justify-center w-28 h-28 rounded-full border border-primary/20 bg-card/50 backdrop-blur-md overflow-hidden hover:scale-105 transition-transform duration-500 shadow-xl shadow-primary/10">
                 <Image
-                  src="/logo_only.svg"
+                  src="/branding/simbolo_color.svg"
                   alt="Logo Koinonia Tech"
                   width={80}
                   height={80}
@@ -253,7 +253,7 @@ export default function BioPage() {
         <footer className="mt-8 flex flex-col items-center text-center gap-4">
           <Reveal delay={1300}>
             <div className="flex items-center gap-2 text-foreground font-bold text-sm">
-              <Image src="/logo_only.svg" alt="" width={20} height={20} />
+              <Image src="/branding/simbolo_color.svg" alt="" width={20} height={20} />
               {siteConfig.name}
             </div>
             <p className="text-xs text-muted-fg mt-2">
