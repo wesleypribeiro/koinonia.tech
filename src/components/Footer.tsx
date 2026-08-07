@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Mail } from "lucide-react";
 import { navItems, siteConfig } from "@/lib/site";
 import WhatsAppIcon from "./icons/WhatsAppIcon";
 import { InstagramIcon } from "./icons/SocialIcons";

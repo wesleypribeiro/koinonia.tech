@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Code, Cpu, ShieldCheck, Target, Eye, Sparkles, Handshake, Gauge, Mail, Clock, ChevronDown } from "lucide-react";
+import { ArrowRight, Code, Cpu, ShieldCheck, Target, Eye, Sparkles, Handshake, Gauge, Clock, ChevronDown } from "lucide-react";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
 import Magnetic from "@/components/Magnetic";
 import ServiceCard from "@/components/ServiceCard";
-import ProjectCard from "@/components/ProjectCard";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import ContactForm from "@/components/ContactForm";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";

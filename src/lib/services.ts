@@ -1,4 +1,4 @@
-import { Code2, Globe, ShoppingCart, Lightbulb, Bot, type LucideIcon } from "lucide-react";
+import { Code2, Globe, ShoppingCart, Bot, type LucideIcon } from "lucide-react";
 
 export type Service = {
   slug: string;
