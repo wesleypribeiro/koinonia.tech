@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Mail } from "lucide-react";
 import { navItems, siteConfig } from "@/lib/site";
 import WhatsAppIcon from "./icons/WhatsAppIcon";
-import { LinkedinIcon, InstagramIcon, GithubIcon } from "./icons/SocialIcons";
+import { InstagramIcon } from "./icons/SocialIcons";
 import Brand from "./Brand";
 
 export default function Footer() {
@@ -35,15 +35,7 @@ export default function Footer() {
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-wide text-foreground">Contato</h2>
           <ul className="mt-4 space-y-3 text-sm">
-            <li>
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="inline-flex items-center gap-2 transition-colors hover:text-primary"
-              >
-                <Mail className="h-4 w-4" aria-hidden />
-                {siteConfig.email}
-              </a>
-            </li>
+
             <li>
               <a
                 href={siteConfig.whatsapp.href}
@@ -58,15 +50,7 @@ export default function Footer() {
           </ul>
 
           <div className="mt-5 flex items-center gap-3">
-            <a
-              href={siteConfig.socials.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-muted-fg transition-colors hover:border-primary hover:text-primary"
-            >
-              <LinkedinIcon className="h-4 w-4" />
-            </a>
+
             <a
               href={siteConfig.socials.instagram}
               target="_blank"
@@ -76,15 +60,7 @@ export default function Footer() {
             >
               <InstagramIcon className="h-4 w-4" />
             </a>
-            <a
-              href={siteConfig.socials.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-muted-fg transition-colors hover:border-primary hover:text-primary"
-            >
-              <GithubIcon className="h-4 w-4" />
-            </a>
+
           </div>
         </div>
       </div>

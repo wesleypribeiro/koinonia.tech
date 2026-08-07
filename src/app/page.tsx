@@ -6,6 +6,7 @@ import Reveal from "@/components/Reveal";
 import Magnetic from "@/components/Magnetic";
 import ServiceCard from "@/components/ServiceCard";
 import ProjectCard from "@/components/ProjectCard";
+import ProjectCarousel from "@/components/ProjectCarousel";
 import ContactForm from "@/components/ContactForm";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { services } from "@/lib/services";
@@ -178,19 +179,7 @@ export default function Home() {
           </Reveal>
 
           <div className="mt-16">
-            {projects.length > 0 ? (
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {projects.map((project, i) => (
-                  <Reveal key={project.title} delay={i * 80} className="h-full">
-                    <ProjectCard project={project} />
-                  </Reveal>
-                ))}
-              </div>
-            ) : (
-              <Reveal className="mx-auto max-w-md rounded-xl border border-dashed border-border bg-card p-12 text-center">
-                <p className="text-muted-fg">Em breve, nossos projetos aqui.</p>
-              </Reveal>
-            )}
+            <ProjectCarousel projects={projects} />
           </div>
         </Container>
       </section>
@@ -215,7 +204,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={80} className="h-full">
               <div className="bento-card p-6 sm:p-8 h-full flex flex-col justify-center text-center">
-                <h3 className="text-xl font-bold mb-3 text-foreground">Sites institucionais</h3>
+                <h3 className="text-xl font-bold mb-3 text-foreground">Sites institucionais & Landing pages</h3>
                 <p className="text-muted-fg">Presença digital responsiva, otimizada para SEO e voltada à geração de contatos.</p>
               </div>
             </Reveal>
@@ -330,17 +319,7 @@ export default function Home() {
 
               <div className="bento-card p-6 sm:p-8">
                 <ul className="space-y-6">
-                  <li className="flex items-center gap-4">
-                    <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                      <Mail className="h-5 w-5" aria-hidden />
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-foreground">E-mail Direto</p>
-                      <a href={`mailto:${siteConfig.email}`} className="text-muted-fg transition-colors hover:text-primary">
-                        {siteConfig.email}
-                      </a>
-                    </div>
-                  </li>
+
                   <li className="flex items-center gap-4">
                     <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <Clock className="h-5 w-5" aria-hidden />

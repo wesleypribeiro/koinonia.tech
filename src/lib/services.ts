@@ -25,13 +25,13 @@ export const services: Service[] = [
   },
   {
     slug: "sites-institucionais",
-    title: "Sites institucionais",
-    short: "Presença digital profissional, rápida e otimizada para SEO.",
+    title: "Sites institucionais & Landing pages",
+    short: "Presença digital profissional, rápida e otimizada para conversão.",
     description:
-      "Criamos sites institucionais modernos, responsivos e otimizados para mecanismos de busca, que transmitem credibilidade e convertem visitantes em clientes.",
+      "Criamos sites institucionais e landing pages modernos, responsivos e otimizados para mecanismos de busca, que transmitem credibilidade e convertem visitantes em clientes.",
     icon: Globe,
     bullets: [
-      "Design responsivo e acessível",
+      "Design responsivo e focado em conversão",
       "Performance e otimização para SEO",
       "Fácil de atualizar e evoluir",
     ],
@@ -60,19 +60,6 @@ export const services: Service[] = [
       "Agentes e assistentes com IA",
       "Atendimento e automações no WhatsApp",
       "Orquestração de fluxos com n8n",
-    ],
-  },
-  {
-    slug: "consultoria",
-    title: "Consultoria & Soluções",
-    short: "Análise, arquitetura e apoio técnico para o seu projeto.",
-    description:
-      "Apoiamos a sua equipe com análise técnica, arquitetura de software e definição da melhor solução para tirar a sua ideia do papel com segurança.",
-    icon: Lightbulb,
-    bullets: [
-      "Análise de requisitos e viabilidade",
-      "Arquitetura e escolha de tecnologias",
-      "Acompanhamento técnico próximo",
     ],
   },
 ];
