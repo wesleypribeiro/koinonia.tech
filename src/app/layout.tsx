@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -39,19 +42,49 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.name} — Tecnologia com propósito`,
     description: siteConfig.description,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name}: sites, sistemas, e-commerces e automação com IA`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — Tecnologia com propósito`,
     description: siteConfig.description,
+    images: ["/og-image.png"],
   },
   icons: {
     icon: [
-      { url: "/branding/favicon.ico", sizes: "any" },
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/branding/favicon_32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
     ],
-    apple: "/branding/favicon_192x192.png",
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
   },
+  manifest: "/site.webmanifest",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#1F2933",
+};
+
+// Dados estruturados para o Google (só com informação que já está no site).
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: siteConfig.name,
+  slogan: siteConfig.slogan,
+  description: siteConfig.description,
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/branding/logo_principal_horizontal_color.png`,
+  image: `${siteConfig.url}/og-image.png`,
+  email: siteConfig.email,
+  telephone: `+${siteConfig.whatsapp.number}`,
+  areaServed: "BR",
 };
 
 // Roda antes do primeiro paint para evitar flash do tema (FOUC).
@@ -76,6 +109,10 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
       </head>
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} ${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased bg-background text-foreground`}

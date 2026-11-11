@@ -8,7 +8,9 @@ export const siteConfig = {
   slogan: "Tecnologia com propósito",
   description:
     "Agência de desenvolvimento de software: sistemas sob medida, sites institucionais, e-commerces, automação com IA e consultoria.",
-  url: "https://koinoniadev.com.br", // PLACEHOLDER: domínio real
+  // Endereço oficial. A Vercel redireciona koinoniadev.com.br para o www,
+  // então canonical, sitemap e Open Graph precisam usar o www.
+  url: "https://www.koinoniadev.com.br",
   email: "contato@koinoniadev.com.br", // PLACEHOLDER
   whatsapp: {
     number: whatsappNumber,

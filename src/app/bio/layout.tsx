@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   description:
     "Todos os links da Koinonia Dev em um só lugar. Sites, sistemas, automações e consultoria em tecnologia.",
   robots: { index: false, follow: false },
+  alternates: { canonical: "/bio" },
 };
 
 /**

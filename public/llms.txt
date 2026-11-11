@@ -1,0 +1,16 @@
+# Koinonia Dev
+
+> Agência de desenvolvimento de software. Tecnologia com propósito: sistemas sob medida, sites institucionais, e-commerces, automação com IA e consultoria.
+
+## Serviços
+
+- Sistemas sob medida: painéis e dashboards administrativos, integrações com APIs e serviços externos, automação de fluxos e relatórios.
+- Sites institucionais e landing pages: design responsivo e focado em conversão, performance e otimização para SEO.
+- E-commerces: integração com gateways de pagamento, gestão de produtos, estoque e pedidos, checkout rápido e seguro.
+- Automação e IA: agentes e assistentes com IA, atendimento e automações no WhatsApp, orquestração de fluxos com n8n.
+
+## Contato
+
+- Site: https://www.koinoniadev.com.br
+- WhatsApp: (12) 98899-3144
+- E-mail: contato@koinoniadev.com.br
