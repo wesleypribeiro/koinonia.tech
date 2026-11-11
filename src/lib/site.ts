@@ -4,21 +4,21 @@ const whatsappNumber = "5512988993144"; // PLACEHOLDER: DDI+DDD+número, só dí
 const whatsappMessage = "Olá! Vim pelo site e gostaria de conversar sobre um projeto.";
 
 export const siteConfig = {
-  name: "Koinonia Tech",
+  name: "Koinonia Dev",
   slogan: "Tecnologia com propósito",
   description:
     "Agência de desenvolvimento de software: sistemas sob medida, sites institucionais, e-commerces, automação com IA e consultoria.",
-  url: "https://koinoniatech.com.br", // PLACEHOLDER: domínio real
-  email: "contato@koinoniatech.com.br", // PLACEHOLDER
+  url: "https://koinoniadev.com.br", // PLACEHOLDER: domínio real
+  email: "contato@koinoniadev.com.br", // PLACEHOLDER
   whatsapp: {
     number: whatsappNumber,
     display: "(12) 98899-3144", // PLACEHOLDER
     href: `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`,
   },
   socials: {
-    linkedin: "https://linkedin.com/company/koinonia-tech", // PLACEHOLDER
-    instagram: "https://instagram.com/koinonia.tech", // PLACEHOLDER
-    github: "https://github.com/koinonia-tech", // PLACEHOLDER
+    linkedin: "https://linkedin.com/company/koinonia-dev", // PLACEHOLDER
+    instagram: "https://instagram.com/koinonia.dev", // PLACEHOLDER
+    github: "https://github.com/koinonia-dev", // PLACEHOLDER
   },
 } as const;
 

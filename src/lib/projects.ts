@@ -6,7 +6,7 @@ export type Project = {
   url?: string; // PLACEHOLDER: link do projeto, se houver
 };
 
-// PLACEHOLDER: substitua pelos projetos reais da Koinonia Tech.
+// PLACEHOLDER: substitua pelos projetos reais da Koinonia Dev.
 export const projects: Project[] = [
   {
     title: "Cultura Americana School",

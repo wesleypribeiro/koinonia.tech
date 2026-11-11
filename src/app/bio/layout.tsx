@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Koinonia Tech — Links",
+  title: "Koinonia Dev — Links",
   description:
-    "Todos os links da Koinonia Tech em um só lugar. Sites, sistemas, automações e consultoria em tecnologia.",
+    "Todos os links da Koinonia Dev em um só lugar. Sites, sistemas, automações e consultoria em tecnologia.",
   robots: { index: false, follow: false },
 };
 

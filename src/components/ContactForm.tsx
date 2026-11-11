@@ -8,7 +8,7 @@ export default function ContactForm() {
   const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID || "unconfigured";
   const [state, handleSubmit, reset] = useForm(formId, {
     data: {
-      subject: "Novo contato pelo site da Koinonia Tech",
+      subject: "Novo contato pelo site da Koinonia Dev",
       pageUrl: typeof window !== "undefined" ? window.location.href : "",
     },
   });

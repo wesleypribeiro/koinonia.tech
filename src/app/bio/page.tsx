@@ -117,7 +117,7 @@ export default function BioPage() {
               <Link href="/" className="relative flex items-center justify-center w-28 h-28 rounded-full border border-primary/20 bg-card/50 backdrop-blur-md overflow-hidden hover:scale-105 transition-transform duration-500 shadow-xl shadow-primary/10">
                 <Image
                   src="/branding/simbolo_color.svg"
-                  alt="Logo Koinonia Tech"
+                  alt="Logo Koinonia Dev"
                   width={80}
                   height={80}
                   priority
