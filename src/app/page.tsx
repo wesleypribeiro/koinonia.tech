@@ -44,24 +44,19 @@ export default function Home() {
               </Reveal>
 
               {/* Split Text Reveal logic */}
-              <div className="flex flex-col gap-2">
-                <Reveal delay={150} direction="up" fade>
-                  <h1 className="text-foreground tracking-tighter uppercase leading-[0.9] w-full">
-                    TECNOLOGIA
-                  </h1>
+              {/* Um h1 só, com cada linha animada separadamente */}
+              <h1 className="flex flex-col gap-2 tracking-tighter uppercase leading-[0.9]">
+                <Reveal as="span" delay={150} direction="up" fade className="block w-full text-foreground">
+                  TECNOLOGIA
+                </Reveal>{" "}
+                <Reveal as="span" delay={300} direction="up" fade className="flex items-center gap-4 w-full text-muted-fg">
+                  COM
+                  <span className="h-[2px] bg-primary flex-1 hidden md:block opacity-50" aria-hidden="true"></span>
+                </Reveal>{" "}
+                <Reveal as="span" delay={450} direction="up" fade className="block w-full text-primary">
+                  PROPÓSITO
                 </Reveal>
-                <Reveal delay={300} direction="up" fade>
-                  <h1 className="text-foreground tracking-tighter uppercase leading-[0.9] text-muted-fg flex items-center gap-4 w-full">
-                    COM
-                    <span className="h-[2px] bg-primary flex-1 hidden md:block opacity-50"></span>
-                  </h1>
-                </Reveal>
-                <Reveal delay={450} direction="up" fade>
-                  <h1 className="text-primary tracking-tighter uppercase leading-[0.9] w-full">
-                    PROPÓSITO
-                  </h1>
-                </Reveal>
-              </div>
+              </h1>
 
               <Reveal delay={600} direction="up">
                 <p className="mt-8 max-w-2xl text-lg text-muted-fg sm:text-xl font-mono leading-relaxed text-pretty border-l border-primary pl-6">
@@ -144,7 +139,7 @@ export default function Home() {
         <Container>
           <Reveal className="max-w-3xl">
             <div className="tech-tag inline-block mb-4">Nossos Serviços</div>
-            <h2 className="text-foreground tracking-tight">Expertise em software</h2>
+            <h2 className="text-foreground tracking-tight">Sites, sistemas e automações para o seu negócio</h2>
             <p className="mt-5 text-lg text-muted-fg leading-relaxed text-pretty">
               Transformamos ideias complexas em produtos digitais elegantes, escaláveis e focados em resultados.
             </p>
@@ -188,7 +183,7 @@ export default function Home() {
         <Container>
           <Reveal className="max-w-3xl mx-auto text-center mb-16">
             <div className="tech-tag inline-block mb-4">Soluções que podemos desenvolver</div>
-            <h2 className="text-foreground tracking-tight text-3xl sm:text-4xl">Exemplos de Soluções</h2>
+            <h2 className="text-foreground tracking-tight text-3xl sm:text-4xl">O que podemos construir para você</h2>
             <p className="mt-5 text-lg text-muted-fg leading-relaxed">
               Desenvolvemos diversos tipos de sistemas para acelerar o seu negócio.
             </p>
@@ -279,7 +274,7 @@ export default function Home() {
         <Container>
           <Reveal className="max-w-3xl mb-12">
             <div className="tech-tag inline-block mb-4">Contato</div>
-            <h2 className="text-foreground tracking-tight">Vamos construir algo incrível.</h2>
+            <h2 className="text-foreground tracking-tight">Vamos conversar sobre o seu projeto</h2>
             <p className="mt-5 text-lg text-muted-fg leading-relaxed">
               Conte sobre o seu projeto e descubra como podemos ajudar o seu negócio a decolar.
             </p>
