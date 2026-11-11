@@ -19,10 +19,10 @@ export default function Footer() {
         {/* Navegação */}
         <nav aria-label="Rodapé">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-foreground">Navegação</h2>
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-2">
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="text-sm transition-colors hover:text-primary">
+                <Link href={item.href} className="inline-flex min-h-11 items-center text-sm transition-colors hover:text-primary">
                   {item.label}
                 </Link>
               </li>
@@ -33,14 +33,14 @@ export default function Footer() {
         {/* Contato + redes */}
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-wide text-foreground">Contato</h2>
-          <ul className="mt-4 space-y-3 text-sm">
+          <ul className="mt-2 text-sm">
 
             <li>
               <a
                 href={siteConfig.whatsapp.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 transition-colors hover:text-primary"
+                className="inline-flex min-h-11 items-center gap-2 transition-colors hover:text-primary"
               >
                 <WhatsAppIcon className="h-4 w-4" />
                 WhatsApp
@@ -55,7 +55,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-muted-fg transition-colors hover:border-primary hover:text-primary"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-border text-muted-fg transition-colors hover:border-primary hover:text-primary"
             >
               <InstagramIcon className="h-4 w-4" />
             </a>

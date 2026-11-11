@@ -55,7 +55,7 @@ export default function ContactForm() {
         <p className="text-sm text-muted-fg">Recebemos sua mensagem e entraremos em contato em breve.</p>
         <button
           onClick={handleReset}
-          className="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-primary-fg transition-colors hover:bg-primary-hover"
+          className="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-primary-fg transition-[background-color,transform] hover:bg-primary-hover active:scale-[0.98]"
         >
           Enviar nova mensagem
         </button>
@@ -189,7 +189,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={state.submitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-medium text-primary-fg transition-colors hover:bg-primary-hover focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-medium text-primary-fg transition-[background-color,transform] hover:bg-primary-hover active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
         <Send className="h-4 w-4" aria-hidden="true" />
         {state.submitting ? "Enviando..." : "Enviar mensagem"}

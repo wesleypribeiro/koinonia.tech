@@ -30,7 +30,7 @@ export default function ThemeToggle() {
       onClick={toggle}
       aria-label={isDark ? "Ativar tema claro" : "Ativar tema escuro"}
       aria-pressed={isDark}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-md text-foreground transition-colors hover:bg-muted"
+      className="inline-flex h-11 w-11 items-center justify-center rounded-md text-foreground transition-[background-color,transform] hover:bg-muted active:scale-95"
     >
       {/* Evita mismatch de hidratação: só mostra o ícone após montar */}
       {mounted ? (

@@ -22,9 +22,9 @@
   --color-accent-fg: var(--accent-fg);
 
   /* Fonts */
-  --font-sans: var(--font-inter), var(--font-geist-sans), system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
-  --font-display: var(--font-space), var(--font-sans);
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: var(--font-space), var(--font-geist-sans), system-ui, sans-serif;
 }
 
 :root {
@@ -47,8 +47,10 @@
   --card: var(--brand-white);
   --card-border: #e4e4e7;
 
-  --primary: var(--brand-primary);
-  --primary-hover: var(--brand-primary-dark);
+  /* No tema claro o verde da marca (#10B39A) não tem contraste sobre fundo claro.
+     Usamos um tom mais escuro da mesma cor: 5:1 ou mais em fundo, card e tags. */
+  --primary: #086B5D;
+  --primary-hover: #075C50;
   --primary-fg: var(--brand-white);
 
   --accent: var(--brand-support);
@@ -150,7 +152,9 @@
     border: 1px solid var(--card-border);
     border-radius: 0;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-property: transform, box-shadow, border-color;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     z-index: 1;
   }
@@ -196,5 +200,28 @@
     animation: marquee 20s linear infinite;
     display: inline-flex;
     width: max-content;
+  }
+}
+
+/* Quem pediu menos movimento no aparelho não vê animação contínua. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-marquee,
+  .animate-spin,
+  .animate-pulse,
+  .animate-ping {
+    animation: none !important;
+  }
+
+  .bento-card,
+  .bento-card::before {
+    transition: none;
+  }
+
+  .bento-card:hover {
+    transform: none;
   }
 }

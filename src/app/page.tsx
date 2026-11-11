@@ -70,7 +70,7 @@ export default function Home() {
                   <Magnetic>
                     <Link
                       href="#contato"
-                      className="inline-flex items-center justify-center gap-3 bg-primary px-8 py-4 font-bold text-primary-fg uppercase tracking-widest text-sm transition-all hover:bg-primary-hover shadow-[0_0_20px_rgba(var(--primary),0.2)]"
+                      className="inline-flex items-center justify-center gap-3 bg-primary px-8 py-4 font-bold text-primary-fg uppercase tracking-widest text-sm transition-[background-color,transform] hover:bg-primary-hover active:scale-[0.97]"
                     >
                       Iniciar Projeto
                       <ArrowRight className="h-5 w-5" aria-hidden="true" />
@@ -79,7 +79,7 @@ export default function Home() {
                   <Magnetic>
                     <Link
                       href="#servicos"
-                      className="inline-flex items-center justify-center gap-2 px-8 py-4 font-mono text-sm uppercase tracking-widest text-foreground transition-colors hover:text-primary"
+                      className="inline-flex items-center justify-center gap-2 px-8 py-4 font-mono text-sm uppercase tracking-widest text-foreground transition-[color,transform] hover:text-primary active:scale-[0.97]"
                     >
                       Explorar Serviços
                       <ChevronDown className="h-4 w-4" />
@@ -303,7 +303,7 @@ export default function Home() {
                     href={siteConfig.whatsapp.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-6 py-3 font-medium text-white transition-all hover:scale-105 hover:opacity-90 shadow-lg"
+                    className="inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-6 py-3 font-medium text-white transition-transform hover:scale-105 active:scale-95 shadow-lg"
                   >
                     <WhatsAppIcon className="h-5 w-5" />
                     Falar no WhatsApp
