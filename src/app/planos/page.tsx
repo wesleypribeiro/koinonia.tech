@@ -49,6 +49,12 @@ function CardPlano({ plano, cols }: { plano: Plano; cols: string }) {
             {plano.periodo && <span className="font-mono text-sm text-muted-fg">{plano.periodo}</span>}
           </p>
         )}
+        {plano.nota && (
+          <p className="mt-2 flex items-center gap-2 text-sm font-medium text-foreground">
+            <CreditCard className="h-4 w-4 shrink-0 text-primary" aria-hidden />
+            {plano.nota}
+          </p>
+        )}
       </div>
 
       <ul className="mt-6 flex-1 space-y-3 text-sm text-muted-fg">
@@ -212,7 +218,6 @@ export default function PlanosPage() {
               </Reveal>
             ))}
           </div>
-          <Parcelamento />
         </Container>
       </section>
 

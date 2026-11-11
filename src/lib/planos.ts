@@ -18,6 +18,8 @@ export type Plano = {
   periodo?: string;
   detalhe?: string;
   destaque?: boolean;
+  /** Texto pequeno logo abaixo do preço. */
+  nota?: string;
   itens: string[];
   cta: string;
   mensagem: string;
@@ -30,6 +32,7 @@ export const planosCriacao: Plano[] = [
     nome: "Landing page",
     preco: "R$ 497",
     periodo: "pagamento único",
+    nota: "ou em até 12x no cartão (com o acréscimo da maquininha)",
     detalhe: "Uma página focada em um objetivo: vender, captar contato ou divulgar um serviço.",
     itens: [
       "Página única com as seções que o seu negócio precisa",
@@ -45,6 +48,7 @@ export const planosCriacao: Plano[] = [
     nome: "Site institucional",
     preco: "R$ 997",
     periodo: "pagamento único",
+    nota: "ou em até 12x no cartão (com o acréscimo da maquininha)",
     detalhe: "O site completo da sua empresa, com as páginas para apresentar o que você faz.",
     destaque: true,
     itens: [
