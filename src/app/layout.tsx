@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { siteConfig } from "@/lib/site";
 
 const geistSans = Geist({
@@ -88,6 +89,7 @@ const organizationJsonLd = {
   email: siteConfig.email,
   telephone: `+${siteConfig.whatsapp.number}`,
   areaServed: "BR",
+  sameAs: [siteConfig.socials.instagram],
 };
 
 // Roda antes do primeiro paint para evitar flash do tema (FOUC).
@@ -123,6 +125,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );

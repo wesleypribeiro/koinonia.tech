@@ -23,7 +23,8 @@ export default function BioLayout({
         dangerouslySetInnerHTML={{
           __html: `
             body > header,
-            body > footer { display: none !important; }
+            body > footer,
+            body > [data-whatsapp-float] { display: none !important; }
             body > main { flex: unset !important; }
             body {
               background: #050510 !important;
