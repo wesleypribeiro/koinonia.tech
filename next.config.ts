@@ -11,6 +11,15 @@ const nextConfig: NextConfig = {
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
+  // Páginas de demonstração de clientes: public/<slug>/index.html abre em /<slug>.
+  // Fica em afterFiles, então as rotas do app (/, /bio, /planos) vêm antes.
+  async rewrites() {
+    return {
+      beforeFiles: [],
+      afterFiles: [{ source: "/:slug", destination: "/:slug/index.html" }],
+      fallback: [],
+    };
+  },
 };
 
 export default nextConfig;
