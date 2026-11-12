@@ -94,18 +94,18 @@ a{color:inherit}
 .titulo{position:relative;margin:0 0 28px;max-width:1000px}
 .titulo h1,.titulo .placa{font-weight:900;font-size:clamp(44px,8.2vw,118px);line-height:.94;letter-spacing:-.035em;font-variation-settings:"wdth" 118;margin:0}
 .titulo h1{position:relative;color:var(--tinta);z-index:2}
-.titulo .placa{position:absolute;top:0;left:0;width:100%;display:block;mix-blend-mode:multiply;z-index:1;pointer-events:none;user-select:none}
+.titulo .placa{position:absolute;top:0;left:0;width:100%;display:block;z-index:1;opacity:0;mix-blend-mode:multiply;pointer-events:none;user-select:none}
 .p-c{color:var(--c)}.p-m{color:var(--m)}.p-y{color:var(--y)}
 .titulo em{font-style:normal;color:var(--m-forte)}
 .titulo .placa em{color:inherit}
 @media (prefers-reduced-motion:no-preference){
   .titulo h1{animation:k 1.5s var(--mola) .9s both}
-  .p-c{animation:reg-c 1.6s var(--mola) .25s both}
-  .p-m{animation:reg-m 1.6s var(--mola) .35s both}
-  .p-y{animation:reg-y 1.6s var(--mola) .45s both}
-  @keyframes reg-c{from{transform:translate(-9px,-5px)}to{transform:none}}
-  @keyframes reg-m{from{transform:translate(8px,4px)}to{transform:none}}
-  @keyframes reg-y{from{transform:translate(-3px,8px)}to{transform:none}}
+  .p-c{animation:reg-c 2.2s var(--mola) .1s both}
+  .p-m{animation:reg-m 2.2s var(--mola) .2s both}
+  .p-y{animation:reg-y 2.2s var(--mola) .3s both}
+  @keyframes reg-c{0%{opacity:.9;transform:translate(-9px,-5px)}70%{opacity:.9;transform:none}100%{opacity:0;transform:none}}
+  @keyframes reg-m{0%{opacity:.9;transform:translate(8px,4px)}70%{opacity:.9;transform:none}100%{opacity:0;transform:none}}
+  @keyframes reg-y{0%{opacity:.9;transform:translate(-3px,8px)}70%{opacity:.9;transform:none}100%{opacity:0;transform:none}}
   @keyframes k{from{opacity:0;transform:translate(4px,-3px)}to{opacity:1;transform:none}}
 }
 .abre{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(24px,4vw,64px);align-items:end;padding-bottom:clamp(32px,4vw,52px)}
