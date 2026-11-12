@@ -53,7 +53,7 @@
   --gut:clamp(16px,4vw,48px); --max:1180px;
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{margin:0;background:var(--mesa);color:var(--tinta);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;font-variation-settings:"wdth" 100}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -94,7 +94,7 @@ a{color:inherit}
 .titulo{position:relative;margin:0 0 28px;max-width:1000px}
 .titulo h1,.titulo .placa{font-weight:900;font-size:clamp(44px,8.2vw,118px);line-height:.94;letter-spacing:-.035em;font-variation-settings:"wdth" 118;margin:0}
 .titulo h1{position:relative;color:var(--tinta);z-index:2}
-.titulo .placa{position:absolute;inset:0;mix-blend-mode:multiply;z-index:1;pointer-events:none;user-select:none}
+.titulo .placa{position:absolute;top:0;left:0;width:100%;display:block;mix-blend-mode:multiply;z-index:1;pointer-events:none;user-select:none}
 .p-c{color:var(--c)}.p-m{color:var(--m)}.p-y{color:var(--y)}
 .titulo em{font-style:normal;color:var(--m-forte)}
 .titulo .placa em{color:inherit}
