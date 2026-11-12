@@ -122,7 +122,7 @@ h1,.chamada,.texto{overflow-wrap:break-word}
 .dado{display:grid;grid-template-columns:24px minmax(0,1fr);gap:14px}
 .dado svg{width:22px;height:22px;color:var(--acc-ink);margin-top:2px}
 .dado .rotulo{display:block;margin-bottom:6px;color:var(--cinza)}
-.dado a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;text-decoration:none} .dado a:hover{color:var(--acc-ink)}
+.dado a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;text-decoration:none;overflow-wrap:anywhere;max-width:100%} .dado a:hover{color:var(--acc-ink)}
 .horas{display:grid;grid-template-columns:auto auto;gap:4px 20px;font-variant-numeric:tabular-nums;max-width:100%}
 .horas span:nth-child(odd){color:var(--cinza)}
 .mapa{overflow:hidden;border:1px solid var(--linha);min-height:340px;background:var(--cartao)}
@@ -280,12 +280,14 @@ footer{background:var(--tinta);color:#9AA3AE;border-top:1px solid #262B33} foote
     var agora=(+parts.hour%24)*60+(+parts.minute);
     function min(s){var p=s.split(':');return +p[0]*60+(+p[1])}
     var txt,cls;
-    var hoje=H.filter(function(h){return h[0]===dia})[0];
-    if(hoje&&agora>=min(hoje[1])&&agora<min(hoje[2])){txt='Aberto agora, fecha às '+hora(hoje[2]);cls='aberto'}
+    function doDia(d){return H.filter(function(h){return h[0]===d}).sort(function(a,b){return min(a[1])-min(b[1])})}
+    var ab=doDia(dia).filter(function(h){return agora>=min(h[1])&&agora<min(h[2])})[0];
+    if(ab){txt='Aberto agora, fecha às '+hora(ab[2]);cls='aberto'}
     else{
       cls='fechado';txt='Fechado agora';
-      for(var i=0;i<8;i++){var d=(dia+i)%7;var h=H.filter(function(x){return x[0]===d})[0];
-        if(h&&(i>0||agora<min(h[1]))){txt='Fechado agora, abre '+(i===0?'hoje':i===1?'amanhã':nomes[d])+' às '+hora(h[1]);break}}
+      busca:for(var i=0;i<8;i++){var d=(dia+i)%7;var l=doDia(d);
+        for(var j=0;j<l.length;j++){var h=l[j];
+          if(i>0||agora<min(h[1])){txt='Fechado agora, abre '+(i===0?'hoje':i===1?'amanhã':nomes[d])+' às '+hora(h[1]);break busca}}}
     }
     document.querySelectorAll('[data-status]').forEach(function(el){el.textContent=txt;el.classList.add(cls)});
   }catch(err){}
