@@ -17,7 +17,7 @@
 <meta property="og:url" content="https://www.koinoniadev.com.br/refrescar-ar-jacarei">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.koinoniadev.com.br/refrescar-ar-jacarei">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B63B5'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%23FFFFFF'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg viewBox=%220 0 150 52%22 xmlns=%22http://www.w3.org/2000/svg%22 aria-label=%22Refrescar Ar Condicionado%22%3E%3Crect width=%22150%22 height=%2252%22 rx=%226%22 fill=%22%230E2747%22/%3E%3Cpath d=%22M10 20c14-10 30-10 44-2M10 26c14-9 30-9 44-1M10 32c14-8 30-8 44 0%22 fill=%22none%22 stroke=%22%232F8FE0%22 stroke-width=%223%22 stroke-linecap=%22round%22/%3E%3Ctext x=%2260%22 y=%2227%22 font-family=%22Arial Black%2CArial%2Csans-serif%22 font-weight=%22900%22 font-size=%2215%22 fill=%22%23FFFFFF%22%3EREFRESCAR%3C/text%3E%3Ctext x=%2260%22 y=%2240%22 font-family=%22Arial%2Csans-serif%22 font-weight=%22700%22 font-size=%228.5%22 fill=%22%238CC8F5%22%3EAR CONDICIONADO%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&family=Red+Hat+Text:wght@400;500;600&family=Red+Hat+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -142,7 +142,7 @@ footer a{text-underline-offset:3px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.surge{opacity:1;transform:none;transition:none}.btn,.duvidas summary svg{transition:none}}
 
 :root{--fundo:#EDF1F5;--cartao:#F8F9F8;--tinta:#17191C;--cinza:#4D5359;--linha:#CDD1CF;--linha-forte:#8A9190;
---acc:#0B63B5;--acc-on:#FFFFFF;--acc-ink:#0B63B5;--acc-hover:#0B63B5;--foco:#0B63B5;--estrela:#A86E00;--topo-bg:color-mix(in srgb,#EDF1F5 90%,transparent);
+--acc:#0B4F9C;--acc-on:#FFFFFF;--acc-ink:#0B4F9C;--acc-hover:#0B4F9C;--foco:#0B4F9C;--estrela:#A86E00;--topo-bg:color-mix(in srgb,#EDF1F5 90%,transparent);
 --mola:cubic-bezier(.32,.72,0,1);--disp:"Red Hat Display",system-ui,sans-serif;--corpo:"Red Hat Text",system-ui,sans-serif;--mono:"Red Hat Mono",ui-monospace,monospace}
 .btn{border-radius:6px;font-weight:700}
 .btn-wa:hover{box-shadow:inset 0 0 0 999px rgba(0,0,0,.14)}
@@ -161,6 +161,9 @@ h1 span{display:block;color:var(--acc-ink)}
 .texto{margin-top:14px;color:var(--cinza);max-width:54ch}
 .legenda{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--cinza)}
 .legenda b{color:var(--tinta);font-weight:500}
+.marca .logo{display:block;height:40px} .marca .logo svg,.marca img.logo{height:40px;width:auto;display:block;border-radius:5px}
+.logo svg{display:block;height:100%;width:auto} img.logo{display:block;object-fit:contain}
+.sig-logo{height:var(--lh,48px)} .sig-logo svg,img.sig-logo{height:var(--lh,48px);width:auto;border-radius:6px}
 [data-status].aberto{color:#1F6E30} [data-status].fechado{color:#9A1C16}
 @media (max-width:900px){.hero{grid-template-columns:minmax(0,1fr)}}
 h2{font-family:var(--disp);font-size:clamp(34px,4.8vw,62px);line-height:1}
@@ -199,7 +202,7 @@ h2{font-weight:900;letter-spacing:-.025em} h3{font-weight:700}
 .visor [data-status].aberto,.visor [data-status].fechado{color:#7FE3FF}
 .split .aleta{position:absolute;left:24px;right:24px;bottom:12px;height:10px;border-radius:0 0 12px 12px;background:repeating-linear-gradient(90deg,#D5DBE0 0 6px,#E6EAED 6px 9px)}
 .ar{display:grid;gap:10px;justify-items:center;padding:22px 0 6px}
-.ar i{display:block;height:3px;border-radius:3px;background:linear-gradient(90deg,transparent,color-mix(in srgb,#0B63B5 55%,#fff),transparent);animation:sopro 2.8s ease-in-out infinite}
+.ar i{display:block;height:3px;border-radius:3px;background:linear-gradient(90deg,transparent,color-mix(in srgb,#0B4F9C 55%,#fff),transparent);animation:sopro 2.8s ease-in-out infinite}
 .ar i:nth-child(1){width:70%} .ar i:nth-child(2){width:52%;animation-delay:.4s} .ar i:nth-child(3){width:34%;animation-delay:.8s}
 @keyframes sopro{0%,100%{opacity:.35;transform:translateY(0)}50%{opacity:1;transform:translateY(6px)}}
 .parede .fone{display:flex;justify-content:center;align-items:center;gap:10px;min-height:52px;margin-top:14px;border-radius:12px;background:var(--cartao);border:1px solid var(--linha);font-family:var(--disp);font-weight:700;font-size:22px;color:var(--tinta);text-decoration:none}
@@ -210,7 +213,7 @@ h2{font-weight:900;letter-spacing:-.025em} h3{font-weight:700}
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 <header class="topo"><div class="wrap">
-  <a class="marca" href="#" aria-label="Refrescar Ar Condicionado, voltar ao início"><span class="selo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4.9 7l14.2 10M4.9 17 19.1 7M9 4l3 2 3-2M9 20l3-2 3 2"/></svg></span><span translate="no">Refrescar</span></a>
+  <a class="marca" href="#" aria-label="Refrescar Ar Condicionado, voltar ao início"><span class="logo "><svg viewBox="0 0 150 52" role="img" aria-label="Refrescar Ar Condicionado"><rect width="150" height="52" rx="6" fill="#0E2747"/><path d="M10 20c14-10 30-10 44-2M10 26c14-9 30-9 44-1M10 32c14-8 30-8 44 0" fill="none" stroke="#2F8FE0" stroke-width="3" stroke-linecap="round"/><text x="60" y="27" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="15" fill="#FFFFFF">REFRESCAR</text><text x="60" y="40" font-family="Arial,sans-serif" font-weight="700" font-size="8.5" fill="#8CC8F5">AR CONDICIONADO</text></svg></span></a>
   <nav aria-label="Seções"><ul><li><a href="#servicos">Serviços</a></li><li><a href="#avaliacoes">Avaliações</a></li><li><a href="#onde">Onde fica</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></nav>
   <a class="btn btn-wa btn-topo" href="https://wa.me/5512991347658?text=Ol%C3%A1%2C%20vi%20o%20site%20e%20queria%20um%20or%C3%A7amento%20de%20ar-condicionado" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.7 17.8L0 24l6.3-1.7a11.8 11.8 0 0 0 5.7 1.5c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.4z"/></svg><span>WhatsApp</span></a>
 </div></header>
@@ -220,7 +223,7 @@ h2{font-weight:900;letter-spacing:-.025em} h3{font-weight:700}
       <p class="chamada">Instalação limpa e o aparelho já testado na entrega.</p><p class="texto">Fica na Av. Engenheiro Davi Monteiro Lino, 3780, no Jardim Marcondes, em Jacareí. Instala, conserta e faz a manutenção do ar-condicionado. São 155 avaliações no Google, com média 4,9.</p>
       <div class="acoes"><a class="btn btn-wa" href="https://wa.me/5512991347658?text=Ol%C3%A1%2C%20vi%20o%20site%20e%20queria%20um%20or%C3%A7amento%20de%20ar-condicionado" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.7 17.8L0 24l6.3-1.7a11.8 11.8 0 0 0 5.7 1.5c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.4z"/></svg>Pedir orçamento</a><a class="btn btn-linha" href="#onde">Como chegar</a></div></div>
     <div class="assinatura parede" role="group" aria-label="Contato de Refrescar Ar Condicionado">
-      <div class="split"><span class="marca-ap" translate="no">Refrescar</span>
+      <div class="split"><span class="marca-ap" translate="no" style="--lh:34px;display:block"><span class="logo sig-logo"><svg viewBox="0 0 150 52" role="img" aria-label="Refrescar Ar Condicionado"><rect width="150" height="52" rx="6" fill="#0E2747"/><path d="M10 20c14-10 30-10 44-2M10 26c14-9 30-9 44-1M10 32c14-8 30-8 44 0" fill="none" stroke="#2F8FE0" stroke-width="3" stroke-linecap="round"/><text x="60" y="27" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="15" fill="#FFFFFF">REFRESCAR</text><text x="60" y="40" font-family="Arial,sans-serif" font-weight="700" font-size="8.5" fill="#8CC8F5">AR CONDICIONADO</text></svg></span></span>
         <div class="visor"><b>4,9</b><span data-status>Segunda a sexta, 13h30 às 17h</span></div><span class="aleta" aria-hidden="true"></span></div>
       <div class="ar" aria-hidden="true"><i></i><i></i><i></i></div>
       <a class="fone" href="tel:+5512991347658"><small>Ligue</small>(12) 99134-7658</a><p class="legenda"><span><b>Jardim Marcondes, Jacareí</b></span><span><span data-status>Segunda a sexta, 13h30 às 17h</span></span></p></div>
