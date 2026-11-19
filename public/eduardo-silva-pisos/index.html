@@ -76,19 +76,10 @@ h1{font-size:clamp(42px,6vw,76px);margin-top:16px}
 .assinado{margin-top:26px;display:flex;align-items:center;gap:14px;color:var(--muted);font-size:15px}
 .assinado::before{content:"";width:36px;height:1px;background:var(--ouro)}
 /* antes e depois: a raspagem */
-.raspagem{margin:0}
-.chao{position:relative;aspect-ratio:4/3.2;border-radius:18px;overflow:hidden;border:1px solid var(--linha);box-shadow:0 40px 60px -40px rgba(0,0,0,.9),0 0 0 6px rgba(212,175,99,.06);--corte:50%;user-select:none;touch-action:pan-y}
-.chao .camada{position:absolute;inset:0;background:url("/eduardo-silva-pisos/assets/madeira.svg") center/cover}
-.depois{filter:saturate(1.3) contrast(1.12) brightness(.95)}
-.depois::after{content:"";position:absolute;inset:0;background:
-  linear-gradient(105deg,transparent 18%,rgba(255,236,190,.26) 24%,transparent 31%,transparent 52%,rgba(255,236,190,.16) 57%,transparent 62%),
-  radial-gradient(120% 70% at 75% 0%,rgba(255,220,160,.22),transparent 60%),linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.28))}
-.antes{filter:grayscale(.55) sepia(.5) brightness(.7) contrast(.68);clip-path:inset(0 calc(100% - var(--corte)) 0 0)}
-.antes::after{content:"";position:absolute;inset:0;opacity:.9;background:
-  repeating-linear-gradient(97deg,transparent 0 22px,rgba(230,220,200,.10) 22px 23px,transparent 23px 61px),
-  repeating-linear-gradient(81deg,transparent 0 37px,rgba(20,14,8,.22) 37px 39px,transparent 39px 90px),
-  radial-gradient(18% 12% at 22% 34%,rgba(225,215,195,.22),transparent 70%),radial-gradient(14% 10% at 38% 72%,rgba(15,10,5,.35),transparent 70%),
-  radial-gradient(22% 14% at 12% 82%,rgba(230,220,200,.14),transparent 70%)}
+.raspagem{margin:0;width:100%;max-width:500px;justify-self:end}
+.chao{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;border:1px solid var(--linha);box-shadow:0 40px 60px -40px rgba(0,0,0,.9),0 0 0 6px rgba(212,175,99,.06);--corte:50%;user-select:none;touch-action:pan-y;background:var(--sup)}
+.chao .camada{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.antes{clip-path:inset(0 calc(100% - var(--corte)) 0 0)}
 .etq{position:absolute;top:14px;z-index:3;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(10,8,6,.72);color:var(--ink);pointer-events:none}
 .etq.e1{left:14px} .etq.e2{right:14px;color:var(--ouro-claro)}
 .lixa{position:absolute;top:0;bottom:0;left:var(--corte);z-index:2;width:0;pointer-events:none}
@@ -100,7 +91,7 @@ h1{font-size:clamp(42px,6vw,76px);margin-top:16px}
 .chao input{position:absolute;inset:0;z-index:4;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
 .chao:has(input:focus-visible){outline:3px solid var(--ouro-claro);outline-offset:4px}
 .raspagem figcaption{margin-top:12px;display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--muted)}
-@media (max-width:900px){.hero{grid-template-columns:1fr}}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.raspagem{justify-self:center}}
 @media (max-width:480px){.disco{width:52px;height:52px;margin:-26px 0 0 -26px}}
 /* faixa da arte dele */
 .frase{border-block:1px solid var(--linha);background:linear-gradient(90deg,rgba(212,175,99,.05),rgba(212,175,99,.12),rgba(212,175,99,.05))}
@@ -110,6 +101,39 @@ h1{font-size:clamp(42px,6vw,76px);margin-top:16px}
 .cabeca{max-width:680px;margin-bottom:40px}
 .cabeca h2{font-size:clamp(32px,4.4vw,52px);margin-top:12px}
 .cabeca p{margin-top:14px;color:var(--muted)}
+/* trabalhos: antes, raspado e pronto */
+.casos{display:grid;gap:clamp(36px,5vw,56px)}
+.caso h3{font-size:clamp(22px,2.4vw,28px);letter-spacing:.04em}
+.caso>p{margin-top:6px;color:var(--muted)}
+.etapas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;list-style:none;margin:18px 0 0;padding:0;max-width:960px}
+.etapas.duas{grid-template-columns:repeat(2,minmax(0,1fr));max-width:calc((960px - 44px) / 3 * 2 + 22px)}
+.etapas figure{margin:0}
+.foto{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;border:1px solid var(--linha);background:var(--sup)}
+.foto img,.foto video{width:100%;height:100%;object-fit:cover}
+.etapas figcaption{position:absolute;left:10px;top:10px;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(10,8,6,.78);color:var(--ink)}
+.etapas li:last-child figcaption{color:var(--ouro-claro)}
+.etapas li:not(:last-child) .foto::after{content:"";position:absolute;right:-12px;top:50%;z-index:2;width:10px;height:10px;transform:translateY(-50%) rotate(45deg);background:linear-gradient(135deg,var(--ouro-claro),var(--ouro-fundo))}
+.etapas .foto{overflow:visible}
+.etapas .foto img{border-radius:13px}
+.nota{margin-top:28px;font-size:14px;color:var(--muted)}
+@media (max-width:700px){
+  .etapas,.etapas.duas{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72%;max-width:none;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding:0 16px 6px;scroll-padding-inline:16px;scrollbar-width:none}
+  .etapas::-webkit-scrollbar{display:none}
+  .etapas li{scroll-snap-align:start}
+  .etapas li:not(:last-child) .foto::after{display:none}
+  .arraste{display:block}
+}
+.arraste{display:none;margin-top:8px;font-size:13px;color:var(--muted)}
+/* processo em vídeo */
+.videos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;list-style:none;margin:0;padding:0;max-width:860px}
+.videos .foto{aspect-ratio:9/16;border-radius:22px;box-shadow:0 30px 50px -36px rgba(0,0,0,.9)}
+.videos p{margin-top:12px;color:var(--muted);font-size:15px}
+@media (max-width:700px){.videos{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:64%;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding:0 16px 6px;scroll-padding-inline:16px;scrollbar-width:none}.videos::-webkit-scrollbar{display:none}.videos li{scroll-snap-align:start}}
+/* galeria */
+.galeria{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;list-style:none;margin:18px 0 0;padding:0;max-width:960px}
+.galeria figcaption{margin-top:10px;font-size:15px;color:var(--muted)}
+.galeria figure{margin:0}
+@media (max-width:700px){.galeria{grid-template-columns:repeat(2,minmax(0,1fr))}.galeria li:first-child{grid-column:1/-1}.galeria li:first-child .foto{aspect-ratio:4/3}}
 /* serviços */
 .servicos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .grupo{background:linear-gradient(180deg,var(--sup2),var(--sup));border:1px solid var(--linha);border-radius:18px;padding:clamp(22px,3vw,34px)}
@@ -165,7 +189,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     <img src="/eduardo-silva-pisos/assets/monograma.jpg" srcset="/eduardo-silva-pisos/assets/monograma.jpg 1x, /eduardo-silva-pisos/assets/monograma@2x.jpg 2x" alt="" width="52" height="45">
     <span><b translate="no">EDUARDO SILVA</b><small>Pisos de madeira</small></span>
   </a>
-  <nav aria-label="Seções"><ul><li><a href="#servicos">Serviços</a></li><li><a href="#compromisso">Compromisso</a></li><li><a href="#orcamento">Orçamento</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></nav>
+  <nav aria-label="Seções"><ul><li><a href="#trabalhos">Trabalhos</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#compromisso">Compromisso</a></li><li><a href="#orcamento">Orçamento</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></nav>
   <a class="btn btn-ouro" href="https://wa.me/5512988796506?text=Ol%C3%A1%2C%20vi%20o%20site%20e%20queria%20um%20or%C3%A7amento%20para%20o%20meu%20piso" target="_blank" rel="noopener" aria-label="Pedir orçamento no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg><span>Orçamento</span></a>
 </div></header>
 
@@ -183,17 +207,67 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     </div>
     <figure class="raspagem">
       <div class="chao" data-chao style="--corte:18%">
-        <div class="camada depois" aria-hidden="true"></div>
-        <div class="camada antes" aria-hidden="true"></div>
+        <img class="camada depois" src="/eduardo-silva-pisos/assets/fotos/taco-depois.webp" alt="" width="576" height="720" fetchpriority="high">
+        <img class="camada antes" src="/eduardo-silva-pisos/assets/fotos/taco-antes.webp" alt="" width="576" height="720" fetchpriority="high">
         <span class="etq e1" aria-hidden="true">Antes</span><span class="etq e2" aria-hidden="true">Depois</span>
         <div class="lixa" aria-hidden="true"><span class="disco"></span></div>
         <input type="range" min="0" max="100" value="18" aria-label="Comparar o piso antes e depois da raspagem" aria-valuetext="18% raspado">
       </div>
-      <figcaption><span>Arraste para raspar e ver o brilho voltar.</span><span>Ilustração</span></figcaption>
+      <figcaption><span>Arraste para ver o antes e o depois.</span><span>Piso de taco, serviço do Eduardo</span></figcaption>
     </figure>
   </div></section>
 
   <div class="frase" role="note"><div class="wrap"><p class="ouro">Qualidade, profissionalismo e atenção em cada detalhe.</p></div></div>
+
+  <section class="bloco" id="trabalhos" aria-labelledby="t-trab"><div class="wrap">
+    <div class="cabeca"><p class="rotulo">Trabalhos</p><h2 id="t-trab">Antes, raspado e pronto</h2><p>Cada piso passa pela raspagem até a madeira aparecer limpa. Depois vem o acabamento.</p></div>
+    <div class="casos">
+      <article class="caso">
+        <h3>Sala com piso de taco</h3>
+        <p>O taco estava gasto e manchado. Depois da raspagem, recebeu verniz com brilho.</p>
+        <ol class="etapas">
+          <li><figure class="foto"><img src="/eduardo-silva-pisos/assets/fotos/taco-antes-34.webp" alt="Piso de taco gasto e manchado, antes do serviço" width="576" height="768" loading="lazy"><figcaption>Antes</figcaption></figure></li>
+          <li><figure class="foto"><img src="/eduardo-silva-pisos/assets/fotos/taco-raspado.webp" alt="O mesmo piso de taco depois da raspagem, com a madeira sem verniz" width="576" height="768" loading="lazy"><figcaption>Raspado</figcaption></figure></li>
+          <li><figure class="foto"><img src="/eduardo-silva-pisos/assets/fotos/taco-depois-34.webp" alt="Piso de taco pronto, com verniz brilhante" width="576" height="768" loading="lazy"><figcaption>Pronto</figcaption></figure></li>
+        </ol>
+        <p class="arraste">Deslize para o lado para ver as etapas.</p>
+      </article>
+      <article class="caso">
+        <h3>Deck da área externa</h3>
+        <p>O deck tinha a madeira desbotada pelo sol. Foi raspado e recebeu acabamento novo.</p>
+        <ol class="etapas">
+          <li><figure class="foto"><img src="/eduardo-silva-pisos/assets/fotos/deck-antes.webp" alt="Deck de madeira desbotado e com marcas, antes do serviço" width="576" height="768" loading="lazy"><figcaption>Antes</figcaption></figure></li>
+          <li><figure class="foto"><img src="/eduardo-silva-pisos/assets/fotos/deck-raspado.webp" alt="O mesmo deck depois da raspagem, com a madeira crua" width="576" height="768" loading="lazy"><figcaption>Raspado</figcaption></figure></li>
+          <li><figure class="foto"><img src="/eduardo-silva-pisos/assets/fotos/deck-depois.webp" alt="Deck pronto, com a cor da madeira viva" width="576" height="768" loading="lazy"><figcaption>Pronto</figcaption></figure></li>
+        </ol>
+        <p class="arraste">Deslize para o lado para ver as etapas.</p>
+      </article>
+      <article class="caso">
+        <h3>Quarto com assoalho escuro</h3>
+        <p>O assoalho estava escuro e riscado. A raspagem trouxe de volta a cor clara da madeira.</p>
+        <ol class="etapas duas">
+          <li><figure class="foto"><img src="/eduardo-silva-pisos/assets/fotos/quarto-antes.webp" alt="Assoalho escuro e riscado, antes do serviço" width="576" height="768" loading="lazy"><figcaption>Antes</figcaption></figure></li>
+          <li><figure class="foto"><img src="/eduardo-silva-pisos/assets/fotos/quarto-raspado.webp" alt="O mesmo assoalho depois da raspagem, com a madeira clara" width="576" height="768" loading="lazy"><figcaption>Depois</figcaption></figure></li>
+        </ol>
+      </article>
+    </div>
+  </div></section>
+
+  <section class="bloco" id="processo" aria-labelledby="t-proc" style="padding-top:0"><div class="wrap">
+    <div class="cabeca"><p class="rotulo">Na prática</p><h2 id="t-proc">A raspagem acontecendo</h2><p>A máquina tira a camada gasta e a madeira aparece por baixo.</p></div>
+    <ul class="videos">
+      <li><div class="foto"><video data-video muted loop playsinline preload="none" poster="/eduardo-silva-pisos/assets/fotos/raspando-corredor.webp" aria-label="Vídeo: raspagem de um corredor com assoalho escuro"><source src="/eduardo-silva-pisos/assets/fotos/raspando-corredor.mp4" type="video/mp4"></video></div><p>Corredor com assoalho escuro.</p></li>
+      <li><div class="foto"><video data-video muted loop playsinline preload="none" poster="/eduardo-silva-pisos/assets/fotos/raspando-taco.webp" aria-label="Vídeo: raspagem de um piso de taco"><source src="/eduardo-silva-pisos/assets/fotos/raspando-taco.mp4" type="video/mp4"></video></div><p>Piso de taco.</p></li>
+      <li><div class="foto"><video data-video muted loop playsinline preload="none" poster="/eduardo-silva-pisos/assets/fotos/raspando-quarto.webp" aria-label="Vídeo: raspagem do assoalho de um quarto"><source src="/eduardo-silva-pisos/assets/fotos/raspando-quarto.mp4" type="video/mp4"></video></div><p>Assoalho de quarto.</p></li>
+    </ul>
+    <h3 style="margin-top:56px;font-size:clamp(22px,2.4vw,28px);letter-spacing:.04em">Mais trabalhos</h3>
+    <ul class="galeria">
+      <li><figure><div class="foto"><img src="/eduardo-silva-pisos/assets/fotos/corredor.webp" alt="Corredor com piso de taco envernizado e brilhante" width="558" height="744" loading="lazy"></div><figcaption>Corredor com taco envernizado.</figcaption></figure></li>
+      <li><figure><div class="foto"><img src="/eduardo-silva-pisos/assets/fotos/quarto-taco.webp" alt="Quarto com assoalho de madeira avermelhada" width="576" height="768" loading="lazy"></div><figcaption>Assoalho de quarto.</figcaption></figure></li>
+      <li><figure><div class="foto"><img src="/eduardo-silva-pisos/assets/fotos/deck-piscina.webp" alt="Deck ao lado da piscina, com a máquina de raspagem no meio do serviço" width="576" height="768" loading="lazy"></div><figcaption>Deck da piscina durante a raspagem.</figcaption></figure></li>
+    </ul>
+    <p class="nota">Fotos e vídeos de serviços feitos pelo Eduardo.</p>
+  </div></section>
 
   <section class="bloco" id="servicos" aria-labelledby="t-serv"><div class="wrap">
     <div class="cabeca"><p class="rotulo">Serviços</p><h2 id="t-serv">Da raspagem ao último acabamento</h2><p>O piso antigo volta a brilhar, e o piso novo já sai assentado e acabado.</p></div>
@@ -274,6 +348,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   function passo(ts){if(r.dataset.tocou)return;if(!ini)ini=ts;var p=Math.min((ts-ini)/dur,1),e=1-Math.pow(1-p,3),v=de+(ate-de)*e;r.value=v;poe(v);chao.classList.add("mexendo");if(p<1)requestAnimationFrame(passo);else chao.classList.remove("mexendo")}
   ["pointerdown","keydown","touchstart"].forEach(function(ev){r.addEventListener(ev,function(){r.dataset.tocou=1},{passive:true})});
   setTimeout(function(){requestAnimationFrame(passo)},600);
+})();
+/* vídeos: tocam sozinhos (sem som) só quando aparecem na tela */
+(function(){
+  var vs=document.querySelectorAll("[data-video]"); if(!vs.length) return;
+  var calmo=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(calmo||!("IntersectionObserver" in window)){vs.forEach(function(v){v.controls=true;v.preload="metadata"});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(err){if(err&&err.name==="NotAllowedError")v.controls=true})}else v.pause()})},{threshold:.4});
+  vs.forEach(function(v){io.observe(v)});
 })();
 </script>
 </body>
