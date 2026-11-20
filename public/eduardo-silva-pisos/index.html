@@ -115,7 +115,6 @@ h1{font-size:clamp(42px,6vw,76px);margin-top:16px}
 .caso h3{font-size:clamp(22px,2.4vw,28px);letter-spacing:.04em}
 .caso>p{margin-top:6px;color:var(--muted)}
 .etapas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;list-style:none;margin:18px 0 0;padding:0;max-width:960px}
-.etapas.duas{grid-template-columns:repeat(2,minmax(0,1fr));max-width:calc((960px - 44px) / 3 * 2 + 22px)}
 .etapas figure{margin:0}
 .foto{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;border:1px solid var(--linha);background:var(--sup)}
 .foto img,.foto video{width:100%;height:100%;object-fit:cover}
@@ -126,7 +125,7 @@ h1{font-size:clamp(42px,6vw,76px);margin-top:16px}
 .etapas .foto img{border-radius:13px}
 .nota{margin-top:28px;font-size:14px;color:var(--muted)}
 @media (max-width:700px){
-  .etapas,.etapas.duas{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72%;max-width:none;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding:0 16px 6px;scroll-padding-inline:16px;scrollbar-width:none}
+  .etapas{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72%;max-width:none;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding:0 16px 6px;scroll-padding-inline:16px;scrollbar-width:none}
   .etapas::-webkit-scrollbar{display:none}
   .etapas li{scroll-snap-align:start}
   .etapas li:not(:last-child) .foto::after{display:none}
@@ -250,14 +249,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
           <li><figure class="foto"><img src="/eduardo-silva-pisos/assets/fotos/deck-depois.webp" alt="Deck pronto, com a cor da madeira viva" width="576" height="768" loading="lazy"><figcaption>Pronto</figcaption></figure></li>
         </ol>
         <p class="arraste">Deslize para o lado para ver as etapas.</p>
-      </article>
-      <article class="caso">
-        <h3>Quarto com assoalho escuro</h3>
-        <p>O assoalho estava escuro e riscado. A raspagem trouxe de volta a cor clara da madeira.</p>
-        <ol class="etapas duas">
-          <li><figure class="foto"><img src="/eduardo-silva-pisos/assets/fotos/quarto-antes.webp" alt="Assoalho escuro e riscado, antes do serviço" width="576" height="768" loading="lazy"><figcaption>Antes</figcaption></figure></li>
-          <li><figure class="foto"><img src="/eduardo-silva-pisos/assets/fotos/quarto-raspado.webp" alt="O mesmo assoalho depois da raspagem, com a madeira clara" width="576" height="768" loading="lazy"><figcaption>Depois</figcaption></figure></li>
-        </ol>
       </article>
     </div>
   </div></section>
