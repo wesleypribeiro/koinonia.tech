@@ -409,10 +409,16 @@ export const ETAPAS: Etapa[] = [
         linhas: 3,
       },
       {
+        tipo: "subtitulo",
+        id: "enderecoSite",
+        rotulo: "Endereço do site",
+        ajuda:
+          "Domínio é o endereço que a pessoa digita para entrar no site. Ex.: o da Koinonia é koinoniadev.com.br.",
+      },
+      {
         tipo: "escolha",
         id: "dominio",
         rotulo: "Você já tem domínio?",
-        ajuda: "Domínio é o endereço do site, tipo suaempresa.com.br.",
         obrigatorio: true,
         colunas: 3,
         opcoes: [
@@ -432,11 +438,31 @@ export const ETAPAS: Etapa[] = [
       },
       {
         tipo: "texto",
-        id: "dominioDesejado",
-        rotulo: "Que endereço você gostaria?",
-        ajuda: "Pode mandar 2 ou 3 opções. A gente confere quais estão livres.",
-        placeholder: "suaempresa.com.br",
-        max: 200,
+        id: "dominioOpcao1",
+        rotulo: "Que endereço você gostaria? 1ª opção",
+        ajuda:
+          "Normalmente é o nome da empresa, sem espaço nem acento, terminando em .com.br. Ex.: a Oficina do João pode ser oficinadojoao.com.br. Se esse já tiver dono, a gente tenta as outras opções.",
+        placeholder: "Ex.: oficinadojoao.com.br",
+        obrigatorio: (r) => texto(r, "dominio") === "nao",
+        max: 80,
+        mostrar: (r) => ["nao", "naosei"].includes(texto(r, "dominio")),
+      },
+      {
+        tipo: "texto",
+        id: "dominioOpcao2",
+        rotulo: "2ª opção",
+        placeholder: "Ex.: oficinadojoaosjc.com.br",
+        max: 80,
+        meia: true,
+        mostrar: (r) => ["nao", "naosei"].includes(texto(r, "dominio")),
+      },
+      {
+        tipo: "texto",
+        id: "dominioOpcao3",
+        rotulo: "3ª opção",
+        placeholder: "Ex.: joaomecanica.com.br",
+        max: 80,
+        meia: true,
         mostrar: (r) => ["nao", "naosei"].includes(texto(r, "dominio")),
       },
       {
