@@ -89,12 +89,14 @@ const organizationJsonLd = {
 };
 
 // Roda antes do primeiro paint para evitar flash do tema (FOUC).
+// O site abre escuro, a não ser que a pessoa tenha escolhido o claro.
+// O briefing abre claro: é um formulário longo, preenchido no celular durante o dia.
 const themeInitScript = `
 (function () {
   try {
     var stored = localStorage.getItem('theme');
-    // Default to dark unless 'light' is explicitly chosen
-    if (stored !== 'light') {
+    var claroPorPadrao = location.pathname.indexOf('/briefing') === 0;
+    if (stored === 'dark' || (stored !== 'light' && !claroPorPadrao)) {
       document.documentElement.classList.add('dark');
     }
   } catch (e) {}
