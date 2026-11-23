@@ -431,6 +431,15 @@ export const ETAPAS: Etapa[] = [
         mostrar: (r) => texto(r, "dominio") === "sim",
       },
       {
+        tipo: "texto",
+        id: "dominioDesejado",
+        rotulo: "Que endereço você gostaria?",
+        ajuda: "Pode mandar 2 ou 3 opções. A gente confere quais estão livres.",
+        placeholder: "suaempresa.com.br",
+        max: 200,
+        mostrar: (r) => ["nao", "naosei"].includes(texto(r, "dominio")),
+      },
+      {
         tipo: "escolha",
         id: "hospedagem",
         rotulo: "Você já paga hospedagem de site?",
