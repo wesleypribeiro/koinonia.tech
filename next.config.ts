@@ -15,7 +15,19 @@ const nextConfig: NextConfig = {
   // Fica em afterFiles, então as rotas do app (/, /bio, /planos) vêm antes.
   async rewrites() {
     return {
-      beforeFiles: [],
+      // Café da Ane: o cardápio com pedidos é o app cafe-da-ane-cardapio (Vercel), servido aqui dentro.
+      beforeFiles: [
+        {
+          // sem redirecionamento: o app redireciona para a barra no fim e o Next tira a barra (laço)
+          source: "/cafe-da-ane-campos-do-jordao/cardapio",
+          destination:
+            "https://cafe-da-ane-cardapio.vercel.app/cafe-da-ane-campos-do-jordao/cardapio/pedir/cafe-da-ane",
+        },
+        {
+          source: "/cafe-da-ane-campos-do-jordao/cardapio/:path*",
+          destination: "https://cafe-da-ane-cardapio.vercel.app/cafe-da-ane-campos-do-jordao/cardapio/:path*",
+        },
+      ],
       afterFiles: [{ source: "/:slug", destination: "/:slug/index.html" }],
       fallback: [],
     };
