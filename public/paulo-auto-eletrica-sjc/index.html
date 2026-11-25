@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Paulo Auto Elétrica | Auto elétrica em São José dos Campos</title>
+<meta name="description" content="Auto elétrica de carros e caminhões na Vila Tesouro, São José dos Campos. Alternador, bateria, motor de partida e injeção. Nota 5,0 no Google.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Paulo Auto Elétrica | São José dos Campos">
+<meta property="og:description" content="Elétrica de carros e caminhões na Vila Tesouro. 96 avaliações no Google, com média 5,0.">
+<meta property="og:image" content="https://www.koinoniadev.com.br/paulo-auto-eletrica-sjc/assets/caminhao-galpao.jpg">
+<meta name="theme-color" content="#08090A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2308090A'/%3E%3Cpath d='M18 4 8 18h7l-2 10 11-15h-7z' fill='%23F5B82E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Paulo Auto Elétrica",
+  "image": "assets/caminhao-galpao.jpg",
+  "telephone": "+55 12 98236-5129",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Martins Guimarães, 582 - Vila Tesouro",
+    "addressLocality": "São José dos Campos",
+    "addressRegion": "SP",
+    "postalCode": "12221-520",
+    "addressCountry": "BR"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": -23.1708874, "longitude": -45.835967},
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  }],
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "96", "bestRating": "5"}
+}
+</script>
+<style>
+:root{
+  --fundo:#08090A; --placa:#111214; --placa-2:#17181B; --branco:#F4F4F2;
+  --cinza:#9A9DA2; --cinza-2:#6B6E74;
+  --destaque:hsl(42 88% 58%); --destaque-2:hsl(42 80% 44%); --sobre-destaque:#0B0C0E;
+  --linha:rgba(255,255,255,.08); --mola:cubic-bezier(.32,.72,0,1);
+  --sans:"Geist",system-ui,sans-serif; --mono:"Geist Mono",ui-monospace,monospace;
+  --borda:clamp(20px,5vw,64px); --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fundo);color:var(--branco);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--destaque);outline-offset:3px;border-radius:4px}
+.envelope{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--borda)}
+.rotulo{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--cinza);margin:0 0 18px}
+.rotulo b{color:var(--destaque);font-weight:500}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.03em}
+h2{font-size:clamp(32px,4.6vw,60px);line-height:1.02;max-width:16ch}
+h3{font-size:20px;letter-spacing:-.01em;font-weight:600}
+p{margin:0}
+section{padding:clamp(80px,11vw,140px) 0}
+.pular{position:absolute;left:-9999px;top:8px;background:var(--destaque);color:var(--sobre-destaque);padding:8px 14px;border-radius:8px;z-index:100}
+.pular:focus{left:8px}
+
+/* botões */
+.botao{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;background:var(--destaque);color:var(--sobre-destaque);font-weight:600;font-size:16px;text-decoration:none;transition:transform .35s var(--mola),opacity .35s var(--mola)}
+.botao:hover{transform:translateY(-2px)}
+.botao:active{transform:translateY(0) scale(.98)}
+.botao svg{width:20px;height:20px;flex:none}
+.botao.fantasma{background:transparent;color:var(--branco);border:1px solid rgba(255,255,255,.22)}
+.botao.pequeno{min-height:42px;padding:0 16px;font-size:14px}
+
+/* topo */
+.topo{position:fixed;inset:0 0 auto 0;z-index:50;padding:14px 0;background:linear-gradient(rgba(8,9,10,.85),rgba(8,9,10,0))}
+.topo .envelope{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;letter-spacing:-.01em;font-size:16px;white-space:nowrap}
+.marca svg{width:28px;height:28px;flex:none}
+
+/* abertura */
+.abertura{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:0 0 clamp(48px,8vw,96px);isolation:isolate}
+.abertura .foto{position:absolute;inset:0;z-index:-2}
+.abertura .foto img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.abertura::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,9,10,.45) 0%,rgba(8,9,10,.25) 35%,rgba(8,9,10,.88) 72%,var(--fundo) 100%)}
+.abertura h1{font-size:clamp(52px,10.5vw,152px);line-height:.92;letter-spacing:-.05em;font-weight:800;margin:0 0 22px;max-width:9ch}
+.abertura h1 span{color:var(--destaque)}
+.chamada{font-size:clamp(22px,2.6vw,32px);line-height:1.2;font-weight:500;letter-spacing:-.02em;max-width:22ch;margin:0 0 16px}
+.abertura .texto{color:#C9CBCF;max-width:52ch;margin:0 0 32px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+
+/* placar */
+.placar{padding:0;border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);background:var(--placa)}
+.placar .envelope{display:grid;grid-template-columns:repeat(3,1fr)}
+.placar div.item{padding:30px 24px 30px 0}
+.placar div.item+div.item{padding-left:24px;border-left:1px solid var(--linha)}
+.placar strong{display:block;font-size:clamp(26px,3vw,38px);letter-spacing:-.03em;line-height:1.1;font-weight:700}
+.placar strong em{font-style:normal;color:var(--destaque)}
+.placar span{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--cinza)}
+
+/* sobre */
+.sobre .envelope{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(40px,7vw,110px);align-items:start}
+.sobre .paragrafos p{color:#C9CBCF;font-size:clamp(17px,1.4vw,19px);margin-bottom:22px;max-width:54ch}
+.sobre .paragrafos p:first-child{color:var(--branco)}
+.sobre a.tel{color:var(--destaque);text-decoration:none;font-weight:600;white-space:nowrap}
+.sobre a.tel:hover{text-decoration:underline}
+
+/* serviços */
+.servicos{background:var(--placa)}
+.servicos h2{margin-bottom:clamp(40px,6vw,72px)}
+.lista{list-style:none;margin:0;padding:0;border-top:1px solid var(--linha)}
+.lista li{display:grid;grid-template-columns:72px minmax(0,1fr) minmax(0,1.3fr);gap:24px;padding:28px 0;border-bottom:1px solid var(--linha);align-items:baseline}
+.lista .n{font-family:var(--mono);font-size:13px;color:var(--destaque)}
+.lista h3{font-size:clamp(20px,2vw,26px)}
+.lista p{color:var(--cinza)}
+
+/* fotos */
+.galeria{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px;margin-top:clamp(40px,6vw,64px)}
+.galeria figure{margin:0}
+.galeria .moldura{overflow:hidden;border-radius:14px;background:var(--placa-2);aspect-ratio:4/5}
+.galeria img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--mola)}
+.galeria figure:hover img{transform:scale(1.03)}
+.galeria figcaption{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cinza);margin-top:12px}
+
+/* avaliações */
+.avaliacoes{background:var(--placa);overflow:hidden}
+.avaliacoes .topo-av{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,64px)}
+.estrelas{display:flex;gap:4px;color:var(--destaque)}
+.estrelas svg{width:18px;height:18px}
+.faixa{display:flex;width:max-content;animation:correr 60s linear infinite}
+.faixa:hover{animation-play-state:paused}
+.faixa ul{display:flex;gap:16px;list-style:none;margin:0;padding:0 16px 0 0}
+.faixa li{width:min(380px,80vw);background:var(--placa-2);border:1px solid var(--linha);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:20px}
+.faixa blockquote{margin:0;font-size:18px;line-height:1.5}
+.faixa cite{font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--cinza);margin-top:auto}
+@keyframes correr{to{transform:translateX(-50%)}}
+
+/* onde fica */
+.onde .envelope{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(32px,5vw,72px);align-items:stretch}
+.dados{display:flex;flex-direction:column;gap:28px}
+.dados dl{margin:0;display:grid;gap:22px}
+.dados dt{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--cinza);margin-bottom:4px}
+.dados dd{margin:0;font-size:18px}
+.dados dd a{text-decoration:none}
+.dados dd a:hover{color:var(--destaque)}
+.horas{display:grid;grid-template-columns:auto auto;gap:4px 24px;width:max-content;max-width:100%}
+.horas .fechado{color:var(--cinza)}
+.mapa{border-radius:16px;overflow:hidden;border:1px solid var(--linha);min-height:380px;background:var(--placa-2)}
+.mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block;filter:grayscale(.3) invert(.9) hue-rotate(180deg)}
+
+/* dúvidas */
+.duvidas .envelope{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(32px,6vw,96px)}
+details{border-bottom:1px solid var(--linha)}
+details:first-of-type{border-top:1px solid var(--linha)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;font-size:clamp(19px,1.8vw,22px);font-weight:600;letter-spacing:-.01em}
+summary::-webkit-details-marker{display:none}
+summary svg{width:20px;height:20px;flex:none;color:var(--destaque);transition:transform .35s var(--mola)}
+details[open] summary svg{transform:rotate(45deg)}
+details p{color:#C9CBCF;padding:0 0 24px;max-width:56ch}
+
+/* fecho */
+.fecho{background:var(--placa);border-top:1px solid var(--linha)}
+.fecho h2{max-width:14ch;margin-bottom:20px}
+.fecho h2 span{color:var(--destaque)}
+.fecho p{color:#C9CBCF;margin-bottom:32px;max-width:48ch}
+footer{padding:40px 0 calc(40px + env(safe-area-inset-bottom));border-top:1px solid var(--linha);font-size:14px;color:var(--cinza)}
+footer .envelope{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px}
+footer .aviso{font-size:13px;color:var(--cinza-2)}
+
+/* entrada */
+.sobe{opacity:0;transform:translateY(24px);animation:sobe .9s var(--mola) forwards}
+.sobe.d1{animation-delay:.08s}.sobe.d2{animation-delay:.16s}.sobe.d3{animation-delay:.24s}.sobe.d4{animation-delay:.32s}
+@keyframes sobe{to{opacity:1;transform:none}}
+
+@media (max-width:900px){
+  .sobre .envelope,.onde .envelope,.duvidas .envelope{grid-template-columns:1fr}
+  .lista li{grid-template-columns:44px minmax(0,1fr);gap:6px 16px}
+  .lista li p{grid-column:2}
+  .galeria{grid-template-columns:1fr 1fr}
+  .galeria figure:first-child{grid-column:1 / -1}
+  .galeria figure:first-child .moldura{aspect-ratio:4/3}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .placar .envelope{grid-template-columns:1fr}
+  .placar div.item,.placar div.item+div.item{padding:20px 0;border-left:0}
+  .placar div.item+div.item{border-top:1px solid var(--linha)}
+  .topo .botao span{display:none}
+  .topo .botao{padding:0 13px}
+  .acoes .botao{width:100%;justify-content:center}
+  .galeria{grid-template-columns:1fr}
+  .galeria .moldura,.galeria figure:first-child .moldura{aspect-ratio:4/3}
+  .horas{width:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .sobe{opacity:1;transform:none}
+  .faixa{width:auto}
+  .faixa ul{flex-wrap:wrap;padding:0 var(--borda)}
+  .faixa ul[aria-hidden]{display:none}
+}
+</style>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="envelope">
+    <a class="marca" href="#inicio" aria-label="Paulo Auto Elétrica, início">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17181B"/><path d="M18 4 8 18h7l-2 10 11-15h-7z" fill="#F5B82E"/></svg>
+      Paulo Auto Elétrica
+    </a>
+    <a class="botao pequeno" href="https://wa.me/5512982365129?text=Ol%C3%A1%2C%20vi%20a%20p%C3%A1gina%20da%20Paulo%20Auto%20El%C3%A9trica%20e%20queria%20um%20or%C3%A7amento" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5 5 16a8.5 8.5 0 1 1 3.2 3.1z"/><path d="M9 9.5c.3 2 2.2 4.3 4.6 5 .6.2 1.3-.3 1.6-.9l.2-.5-1.8-.9-.7.8c-.9-.4-1.6-1.1-2-2l.8-.7-.9-1.8-.5.2c-.6.3-1.1 1-.9 1.6z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="abertura" id="inicio" aria-labelledby="titulo">
+    <div class="foto">
+      <img src="/paulo-auto-eletrica-sjc/assets/caminhao-galpao.jpg" alt="Caminhão branco estacionado dentro do galpão da Paulo Auto Elétrica" width="1200" height="1600" fetchpriority="high">
+    </div>
+    <div class="envelope">
+      <p class="rotulo sobe"><b>Auto elétrica</b> · Vila Tesouro, São José dos Campos</p>
+      <h1 id="titulo" class="sobe d1">Paulo Auto <span>Elétrica</span></h1>
+      <p class="chamada sobe d2">Atendimento atencioso e honesto, em carro e caminhão.</p>
+      <p class="texto sobe d3">Na Av. Martins Guimarães, 582, Vila Tesouro, em São José dos Campos. Parte elétrica de veículos leves e pesados. São 96 avaliações no Google, com média 5,0.</p>
+      <div class="acoes sobe d4">
+        <a class="botao" href="https://wa.me/5512982365129?text=Ol%C3%A1%2C%20vi%20a%20p%C3%A1gina%20da%20Paulo%20Auto%20El%C3%A9trica%20e%20queria%20um%20or%C3%A7amento" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5 5 16a8.5 8.5 0 1 1 3.2 3.1z"/><path d="M9 9.5c.3 2 2.2 4.3 4.6 5 .6.2 1.3-.3 1.6-.9l.2-.5-1.8-.9-.7.8c-.9-.4-1.6-1.1-2-2l.8-.7-.9-1.8-.5.2c-.6.3-1.1 1-.9 1.6z"/></svg>
+          Chamar no WhatsApp
+        </a>
+        <a class="botao fantasma" href="#onde">Ver endereço</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="placar" aria-label="Resumo">
+    <div class="envelope">
+      <div class="item"><strong><em>5,0</em> no Google</strong><span>96 avaliações</span></div>
+      <div class="item"><strong>Seg a sex</strong><span>Das 8h às 18h</span></div>
+      <div class="item"><strong>Vila Tesouro</strong><span>Av. Martins Guimarães, 582</span></div>
+    </div>
+  </section>
+
+  <section class="sobre" aria-labelledby="t-sobre">
+    <div class="envelope">
+      <div>
+        <p class="rotulo">01 · <b>A oficina</b></p>
+        <h2 id="t-sobre">Elétrica de carro e caminhão na Vila Tesouro.</h2>
+      </div>
+      <div class="paragrafos">
+        <p>A oficina fica na Av. Martins Guimarães, 582, na Vila Tesouro, em São José dos Campos. Abre de segunda a sexta, das 8h às 18h. Sábado e domingo fica fechada.</p>
+        <p>O Paulo cuida da parte elétrica de veículos leves e pesados: alternador, bateria, motor de partida e injeção eletrônica. Nas avaliações, o que mais aparece é atenção no atendimento, conhecimento técnico e honestidade.</p>
+        <p>Para tirar uma dúvida ou levar o seu veículo, é só chamar no WhatsApp: <a class="tel" href="tel:+5512982365129">+55 12 98236-5129</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="servicos" aria-labelledby="t-servicos">
+    <div class="envelope">
+      <p class="rotulo">02 · <b>Serviços</b></p>
+      <h2 id="t-servicos">O que o Paulo resolve.</h2>
+      <ul class="lista">
+        <li><span class="n">01</span><h3>Elétrica em geral</h3><p>Parte elétrica do veículo, como a troca da lâmpada do farol.</p></li>
+        <li><span class="n">02</span><h3>Alternador e bateria</h3><p>Atendimento no alternador e na bateria do seu veículo.</p></li>
+        <li><span class="n">03</span><h3>Motor de partida</h3><p>Atendimento no motor de partida, a peça que faz o motor pegar.</p></li>
+        <li><span class="n">04</span><h3>Injeção eletrônica</h3><p>Atendimento na injeção eletrônica do seu veículo.</p></li>
+        <li><span class="n">05</span><h3>Leves e pesados</h3><p>Carros, picapes e caminhões entram no mesmo galpão.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="fotos" aria-labelledby="t-fotos">
+    <div class="envelope">
+      <p class="rotulo">03 · <b>No galpão</b></p>
+      <h2 id="t-fotos">Por dentro da oficina.</h2>
+      <div class="galeria">
+        <figure>
+          <div class="moldura"><img src="/paulo-auto-eletrica-sjc/assets/carro-placa-galpao.jpg" alt="Galpão da oficina com caminhão de cabine levantada e carro preto com o adesivo da Paulo Auto Elétrica no vidro traseiro" width="720" height="720" loading="lazy"></div>
+          <figcaption>Caminhão em serviço no galpão</figcaption>
+        </figure>
+        <figure>
+          <div class="moldura"><img src="/paulo-auto-eletrica-sjc/assets/picape-capo-aberto.jpg" alt="Picape antiga laranja com o capô aberto dentro da oficina" width="780" height="1040" loading="lazy"></div>
+          <figcaption>Picape com o capô aberto</figcaption>
+        </figure>
+        <figure>
+          <div class="moldura"><img src="/paulo-auto-eletrica-sjc/assets/fusca-motor.jpg" alt="Fusca branco com a tampa do motor aberta na oficina" width="899" height="1020" loading="lazy"></div>
+          <figcaption>Fusca com o motor à mostra</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="avaliacoes" aria-labelledby="t-av">
+    <div class="envelope">
+      <div class="topo-av">
+        <div>
+          <p class="rotulo">04 · <b>Avaliações no Google</b></p>
+          <h2 id="t-av">Nota 5,0 em 96 avaliações.</h2>
+        </div>
+        <div class="estrelas" role="img" aria-label="5 de 5 estrelas">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="faixa">
+      <ul>
+        <li><blockquote>"Excelente profissional, recomendo a todos! Atendimento diferenciado, aliado a muita atenção, conhecimento técnico e, acima de tudo, honestidade."</blockquote><cite>Fernando Rezende</cite></li>
+        <li><blockquote>"Excelente profissional, resolve todos os problemas eletricos em carros e caminhões, Paulão é nota 10."</blockquote><cite>Diego Stabile</cite></li>
+        <li><blockquote>"Serviço de qualidade e honestidade 100%. Profissional de primeira linha sabe dar valor aos clientes"</blockquote><cite>Daniel Siqueira</cite></li>
+        <li><blockquote>"Excelente eletricista, certeiro nas análises. Recomendo!"</blockquote><cite>Tiago Augusto</cite></li>
+      </ul>
+      <ul aria-hidden="true">
+        <li><blockquote>"Excelente profissional, recomendo a todos! Atendimento diferenciado, aliado a muita atenção, conhecimento técnico e, acima de tudo, honestidade."</blockquote><cite>Fernando Rezende</cite></li>
+        <li><blockquote>"Excelente profissional, resolve todos os problemas eletricos em carros e caminhões, Paulão é nota 10."</blockquote><cite>Diego Stabile</cite></li>
+        <li><blockquote>"Serviço de qualidade e honestidade 100%. Profissional de primeira linha sabe dar valor aos clientes"</blockquote><cite>Daniel Siqueira</cite></li>
+        <li><blockquote>"Excelente eletricista, certeiro nas análises. Recomendo!"</blockquote><cite>Tiago Augusto</cite></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="envelope">
+      <div class="dados">
+        <div>
+          <p class="rotulo">05 · <b>Onde fica</b></p>
+          <h2 id="t-onde">Vila Tesouro, São José dos Campos.</h2>
+        </div>
+        <dl>
+          <div><dt>Endereço</dt><dd>Av. Martins Guimarães, 582<br>Vila Tesouro, São José dos Campos, SP<br>CEP 12221-520</dd></div>
+          <div><dt>Telefone e WhatsApp</dt><dd><a href="tel:+5512982365129">+55 12 98236-5129</a></dd></div>
+          <div><dt>Horário</dt><dd class="horas"><span>Segunda a sexta</span><span>8h às 18h</span><span class="fechado">Sábado e domingo</span><span class="fechado">Fechado</span></dd></div>
+        </dl>
+        <div class="acoes">
+          <a class="botao" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.%20Martins%20Guimar%C3%A3es%2C%20582%20-%20Vila%20Tesouro%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012221-520&amp;destination_place_id=ChIJkW-HLxhLzJQRw5Iv1KDdZ7Y" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            Como chegar
+          </a>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe src="https://www.google.com/maps?q=PAULO%20AUTO%20EL%C3%89TRICA%2C%20Av.%20Martins%20Guimar%C3%A3es%2C%20582%20-%20Vila%20Tesouro%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012221-520&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa da Paulo Auto Elétrica na Av. Martins Guimarães, 582, Vila Tesouro, São José dos Campos"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="duvidas" aria-labelledby="t-duvidas">
+    <div class="envelope">
+      <div>
+        <p class="rotulo">06 · <b>Dúvidas</b></p>
+        <h2 id="t-duvidas">Antes de ir.</h2>
+      </div>
+      <div>
+        <details open>
+          <summary>Onde fica?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Na Av. Martins Guimarães, 582, Vila Tesouro, São José dos Campos, SP. CEP 12221-520.</p>
+        </details>
+        <details>
+          <summary>Qual é o horário?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>De segunda a sexta, das 8h às 18h. Sábado e domingo a oficina fica fechada.</p>
+        </details>
+        <details>
+          <summary>Atende caminhão?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Sim. A oficina atende veículos leves e pesados, de carro a caminhão. Para combinar, chame no WhatsApp: +55 12 98236-5129.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="fecho" aria-labelledby="t-fecho">
+    <div class="envelope">
+      <h2 id="t-fecho">Problema na elétrica? <span>Fale com o Paulo.</span></h2>
+      <p>Mande uma mensagem no WhatsApp contando o que o seu veículo tem. A oficina abre de segunda a sexta, das 8h às 18h.</p>
+      <div class="acoes">
+        <a class="botao" href="https://wa.me/5512982365129?text=Ol%C3%A1%2C%20vi%20a%20p%C3%A1gina%20da%20Paulo%20Auto%20El%C3%A9trica%20e%20queria%20um%20or%C3%A7amento" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5 5 16a8.5 8.5 0 1 1 3.2 3.1z"/><path d="M9 9.5c.3 2 2.2 4.3 4.6 5 .6.2 1.3-.3 1.6-.9l.2-.5-1.8-.9-.7.8c-.9-.4-1.6-1.1-2-2l.8-.7-.9-1.8-.5.2c-.6.3-1.1 1-.9 1.6z"/></svg>
+          Chamar no WhatsApp
+        </a>
+        <a class="botao fantasma" href="tel:+5512982365129">Ligar agora</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="envelope">
+    <p>Paulo Auto Elétrica · Av. Martins Guimarães, 582, Vila Tesouro, São José dos Campos, SP</p>
+    <p class="aviso">Página de demonstração feita por Koinonia Dev com o conteúdo público da ficha do Google.</p>
+  </div>
+</footer>
+</body>
+</html>
