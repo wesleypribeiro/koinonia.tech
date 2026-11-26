@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kadoma Auto Center | Mecânica para carros em São José dos Campos</title>
+<meta name="description" content="Mecânica para carros no Jardim America, São José dos Campos. Nota 4,8 com 52 avaliações no Google. Seg. a sex., 8h às 18h. Chame no WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Kadoma Auto Center | Mecânica em São José dos Campos">
+<meta property="og:description" content="Mecânica para carros no Jardim America, São José dos Campos. Nota 4,8 com 52 avaliações no Google.">
+<meta property="og:image" content="https://www.koinoniadev.com.br/kadoma-auto-center-sjc/assets/fachada.jpg">
+<meta name="theme-color" content="#08090A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308090A'/%3E%3Cpath d='M20 14v36M20 32l20-18M27 26l15 24' stroke='%23EC3A4C' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Kadoma Auto Center",
+  "image": "assets/fachada.jpg",
+  "telephone": "+55 12 97403-0765",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. Mar Del Plata, 697 - Jardim America",
+    "addressLocality": "São José dos Campos",
+    "addressRegion": "SP",
+    "postalCode": "12235-340",
+    "addressCountry": "BR"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": -23.2365064, "longitude": -45.8995583},
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  }],
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "52", "bestRating": "5"}
+}
+</script>
+<style>
+:root{
+  --fundo:#08090A; --placa:#111214; --placa-2:#17181B; --branco:#F4F4F2;
+  --cinza:#9A9DA2; --cinza-2:#6E7177;
+  --destaque:hsl(354 88% 62%); --destaque-2:hsl(354 78% 44%);
+  --linha:rgba(255,255,255,.08); --mola:cubic-bezier(.32,.72,0,1);
+  --sans:"Geist",system-ui,sans-serif; --mono:"Geist Mono",ui-monospace,monospace;
+  --gutter:clamp(16px,4vw,48px); --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--fundo);color:var(--branco);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--destaque);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.rotulo{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--cinza)}
+.rotulo b{color:var(--destaque);font-weight:500}
+h1,h2,h3{font-weight:700;letter-spacing:-.03em;line-height:1.02}
+h2{font-size:clamp(32px,4.6vw,60px);margin:14px 0 22px;max-width:16ch}
+h3{font-size:20px;letter-spacing:-.01em;line-height:1.2}
+section{padding:clamp(72px,10vw,128px) 0;border-top:1px solid var(--linha)}
+
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .3s var(--mola),opacity .3s var(--mola)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-zap{background:var(--destaque-2);color:#fff}
+.btn-linha{border:1px solid rgba(255,255,255,.22);color:var(--branco)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* topo */
+.topo{position:fixed;inset:0 0 auto 0;z-index:20;background:rgba(8,9,10,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--linha)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.marca{font-weight:800;letter-spacing:-.02em;text-decoration:none;font-size:18px;white-space:nowrap}
+.marca span{color:var(--destaque)}
+.topo nav{display:flex;gap:26px;font-size:15px;color:var(--cinza)}
+.topo nav a{text-decoration:none;transition:opacity .2s}
+.topo nav a:hover{opacity:.7}
+.topo .btn{min-height:40px;padding:0 16px;font-size:14px}
+@media (max-width:860px){.topo nav{display:none}}
+
+/* abertura */
+.abertura{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:120px 0 clamp(48px,8vw,96px);overflow:hidden;border:0}
+.abertura>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;z-index:-2;transform:scale(1.04);animation:entra 1.6s var(--mola) both}
+.abertura::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,9,10,.55) 0%,rgba(8,9,10,.35) 30%,rgba(8,9,10,.85) 68%,var(--fundo) 100%)}
+.abertura h1{font-size:clamp(52px,10.5vw,148px);line-height:.92;letter-spacing:-.05em;margin:18px 0 22px}
+.abertura h1 span{display:block;color:var(--destaque)}
+.chamada{font-size:clamp(20px,2.4vw,28px);font-weight:500;max-width:24ch;letter-spacing:-.01em;line-height:1.25}
+.abertura p.intro{color:#C9CBCE;max-width:56ch;margin:18px 0 30px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+@keyframes entra{from{opacity:0;transform:scale(1.1)}to{opacity:1;transform:scale(1.04)}}
+
+/* placar */
+.placar{padding:0;border-top:0}
+.placar .grade{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--linha);border-radius:18px;background:var(--placa);overflow:hidden}
+.placar .item{padding:28px clamp(18px,3vw,32px);border-left:1px solid var(--linha)}
+.placar .item:first-child{border-left:0}
+.placar .num{font-size:clamp(40px,5vw,64px);font-weight:700;letter-spacing:-.04em;line-height:1}
+.placar .num small{font-size:.4em;color:var(--cinza);font-weight:500;letter-spacing:0}
+.placar .item p{color:var(--cinza);font-size:15px;margin-top:8px}
+.estrelas{display:flex;gap:3px;margin-top:10px;color:var(--destaque)}
+.estrelas svg{width:16px;height:16px}
+@media (max-width:760px){.placar .grade{grid-template-columns:1fr}.placar .item{border-left:0;border-top:1px solid var(--linha)}.placar .item:first-child{border-top:0}}
+
+/* sobre */
+.sobre .grade{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,6vw,96px);align-items:start}
+.sobre .texto p{color:#C9CBCE;margin-bottom:18px;max-width:58ch}
+.sobre .texto p strong{color:var(--branco);font-weight:600}
+.sobre .texto a{color:var(--destaque);text-decoration-thickness:1px;text-underline-offset:3px}
+@media (max-width:860px){.sobre .grade{grid-template-columns:1fr}}
+
+/* serviços */
+.servicos ol{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--linha);margin-top:16px}
+.servicos li{display:grid;grid-template-columns:56px 1fr;gap:8px;padding:28px 0;border-bottom:1px solid var(--linha)}
+.servicos li:nth-child(odd){padding-right:clamp(16px,3vw,40px)}
+.servicos li:nth-child(even){padding-left:clamp(16px,3vw,40px);border-left:1px solid var(--linha)}
+.servicos .n{font-family:var(--mono);font-size:13px;color:var(--destaque);padding-top:4px}
+.servicos li p{color:var(--cinza);margin-top:6px}
+@media (max-width:760px){.servicos ol{grid-template-columns:1fr}.servicos li:nth-child(n){padding-left:0;padding-right:0;border-left:0}}
+
+/* fotos */
+.fotos .grade{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px;margin-top:16px}
+.fotos figure{position:relative;border-radius:16px;overflow:hidden;background:var(--placa)}
+.fotos figure img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .8s var(--mola)}
+.fotos figure:hover img{transform:scale(1.03)}
+.fotos figcaption{position:absolute;left:12px;bottom:12px;right:12px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:rgba(8,9,10,.78);padding:8px 12px;border-radius:999px;width:fit-content;max-width:calc(100% - 24px)}
+@media (max-width:860px){.fotos .grade{grid-template-columns:1fr 1fr}.fotos figure:first-child{grid-column:1/-1}.fotos figure:first-child img{aspect-ratio:4/3}}
+@media (max-width:480px){.fotos .grade{grid-template-columns:1fr}.fotos figure img{aspect-ratio:4/3}}
+
+/* avaliações */
+.avaliacoes{overflow:hidden}
+.faixa{margin-top:24px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.trilho{display:flex;gap:16px;width:max-content;animation:corre 48s linear infinite}
+.faixa:hover .trilho{animation-play-state:paused}
+.cartao{width:min(420px,82vw);flex:none;background:var(--placa);border:1px solid var(--linha);border-radius:18px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.cartao blockquote{font-size:18px;line-height:1.5;letter-spacing:-.005em}
+.cartao cite{font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--cinza)}
+@keyframes corre{to{transform:translateX(calc(-50% - 8px))}}
+.nota-google{margin-top:28px;color:var(--cinza);font-size:15px}
+.nota-google a{color:var(--branco);text-underline-offset:3px}
+
+/* onde fica */
+.onde .grade{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(24px,4vw,56px);align-items:stretch}
+.onde dl{display:grid;gap:22px;margin:8px 0 28px}
+.onde dt{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--cinza);margin-bottom:4px}
+.onde dd{font-size:18px}
+.onde dd a{text-underline-offset:3px}
+.horas{display:grid;grid-template-columns:auto auto;gap:4px 24px;width:fit-content;font-size:16px}
+.horas .fechado{color:var(--cinza-2)}
+.mapa{border-radius:18px;overflow:hidden;border:1px solid var(--linha);min-height:360px;background:var(--placa)}
+.mapa iframe{width:100%;height:100%;min-height:360px;border:0;display:block;filter:grayscale(.3) contrast(1.05)}
+@media (max-width:860px){.onde .grade{grid-template-columns:1fr}}
+
+/* dúvidas */
+.duvidas .lista{max-width:820px;margin-top:16px;border-top:1px solid var(--linha)}
+.duvidas details{border-bottom:1px solid var(--linha)}
+.duvidas summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;font-size:clamp(19px,2vw,22px);font-weight:600;letter-spacing:-.01em}
+.duvidas summary::-webkit-details-marker{display:none}
+.duvidas summary svg{width:20px;height:20px;flex:none;color:var(--destaque);transition:transform .3s var(--mola)}
+.duvidas details[open] summary svg{transform:rotate(45deg)}
+.duvidas details p{color:#C9CBCE;padding:0 0 24px;max-width:62ch}
+
+/* fecho */
+.fecho{text-align:left}
+.fecho h2{max-width:14ch}
+.fecho p{color:#C9CBCE;margin-bottom:28px;max-width:48ch}
+footer{border-top:1px solid var(--linha);padding:32px 0 110px;color:var(--cinza-2);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+/* botão flutuante no celular */
+.zap-fixo{position:fixed;right:16px;bottom:16px;z-index:30;display:none;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+@media (max-width:860px){.zap-fixo{display:inline-flex}.topo .btn{display:none}}
+
+/* entrada ao rolar */
+.sobe{opacity:0;transform:translateY(24px);transition:opacity .9s var(--mola),transform .9s var(--mola)}
+.sobe.visto{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .sobe{opacity:1;transform:none}
+  .trilho{flex-wrap:wrap;width:auto}
+  .trilho [aria-hidden="true"]{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio">Kadoma <span>Auto Center</span></a>
+    <nav aria-label="Seções">
+      <a href="#servicos">Serviços</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#onde">Onde fica</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-zap" href="https://wa.me/5512974030765?text=Ol%C3%A1%2C%20vi%20o%20site%20e%20queria%20um%20or%C3%A7amento%20para%20o%20meu%20carro" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="abertura">
+    <img src="/kadoma-auto-center-sjc/assets/fachada.jpg" width="1599" height="899" alt="Fachada da Kadoma Auto Center na Rua Mar Del Plata, com a placa vermelha e as portas da oficina abertas" fetchpriority="high">
+    <div class="wrap">
+      <p class="rotulo"><b>Mecânica para carros</b> · Jardim America, São José dos Campos</p>
+      <h1>Kadoma <span>Auto Center</span></h1>
+      <p class="chamada">Oficina de confiança, sem serviço desnecessário.</p>
+      <p class="intro">Na Rua Mar Del Plata, 697, no Jardim America, em São José dos Campos. Mecânica, revisão, troca de óleo, alinhamento e balanceamento. São 52 avaliações no Google, com média 4,8.</p>
+      <div class="acoes">
+        <a class="btn btn-zap" href="https://wa.me/5512974030765?text=Ol%C3%A1%2C%20vi%20o%20site%20e%20queria%20um%20or%C3%A7amento%20para%20o%20meu%20carro" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.8c.2 2.6 3.2 5.6 6 6l1.2-1.3-1.8-1-.9.8c-1-.4-2.3-1.6-2.8-2.8l.8-.9-1-1.8z"/></svg>
+          Pedir orçamento
+        </a>
+        <a class="btn btn-linha" href="#onde">Como chegar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="placar" aria-label="Números da oficina">
+    <div class="wrap">
+      <div class="grade sobe">
+        <div class="item">
+          <div class="num">4,8<small> / 5</small></div>
+          <div class="estrelas" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg>
+          </div>
+          <p>Média no Google</p>
+        </div>
+        <div class="item">
+          <div class="num">52</div>
+          <p>Avaliações de clientes no Google</p>
+        </div>
+        <div class="item">
+          <div class="num">8h<small> às </small>18h</div>
+          <p>De segunda a sexta-feira</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="wrap grade">
+      <div class="sobe">
+        <p class="rotulo"><b>01</b> · A oficina</p>
+        <h2>Mecânico de confiança no Jardim America.</h2>
+      </div>
+      <div class="texto sobe">
+        <p>A Kadoma Auto Center fica na <strong>Rua Mar Del Plata, 697, no Jardim America</strong>, em São José dos Campos. Atende de segunda a sexta, das 8h às 18h.</p>
+        <p>É mecânica para carros: revisão geral, troca de óleo, troca de pneus, alinhamento e balanceamento no próprio local. Nas avaliações, o que mais aparece é honestidade e confiança, e o nome do Douglas, que costuma fazer o atendimento.</p>
+        <p>Quer levar o carro ou tirar uma dúvida antes? É só chamar no WhatsApp: <a href="https://wa.me/5512974030765?text=Ol%C3%A1%2C%20vi%20o%20site%20e%20queria%20um%20or%C3%A7amento%20para%20o%20meu%20carro" target="_blank" rel="noopener">+55 12 97403-0765</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="servicos" id="servicos">
+    <div class="wrap">
+      <p class="rotulo sobe"><b>02</b> · Serviços</p>
+      <h2 class="sobe">O que você resolve aqui.</h2>
+      <ol>
+        <li class="sobe"><span class="n">01</span><div><h3>Mecânica geral</h3><p>Conserto da parte mecânica do carro, com atendimento direto do mecânico.</p></div></li>
+        <li class="sobe"><span class="n">02</span><div><h3>Revisão geral</h3><p>Você deixa o carro para a revisão na mesma oficina que cuida da mecânica.</p></div></li>
+        <li class="sobe"><span class="n">03</span><div><h3>Troca de óleo</h3><p>Troca do óleo do motor feita na própria oficina.</p></div></li>
+        <li class="sobe"><span class="n">04</span><div><h3>Alinhamento e balanceamento</h3><p>Feitos no local, sem precisar levar o carro para outro lugar.</p></div></li>
+        <li class="sobe"><span class="n">05</span><div><h3>Troca de pneus</h3><p>Você troca os pneus no mesmo lugar onde faz a manutenção.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="fotos" id="fotos">
+    <div class="wrap">
+      <p class="rotulo sobe"><b>03</b> · Por dentro</p>
+      <h2 class="sobe">A oficina como ela é.</h2>
+      <div class="grade">
+        <figure class="sobe">
+          <img src="/kadoma-auto-center-sjc/assets/oficina-por-dentro.jpg" width="1200" height="1600" loading="lazy" alt="Área coberta da oficina com carros estacionados e pilares pintados com faixa vermelha">
+          <figcaption>Área de serviço</figcaption>
+        </figure>
+        <figure class="sobe">
+          <img src="/kadoma-auto-center-sjc/assets/motor-aberto.jpg" width="1200" height="1600" loading="lazy" alt="Carro prata com o capô aberto e o motor à mostra dentro da oficina">
+          <figcaption>Manutenção no motor</figcaption>
+        </figure>
+        <figure class="sobe">
+          <img src="/kadoma-auto-center-sjc/assets/rampa-alinhamento.jpg" width="1050" height="1400" loading="lazy" alt="Valeta de concreto pintada de amarelo no piso da oficina, com ferramentas e equipamentos ao lado">
+          <figcaption>Valeta da oficina</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="avaliacoes" id="avaliacoes">
+    <div class="wrap">
+      <p class="rotulo sobe"><b>04</b> · Avaliações</p>
+      <h2 class="sobe">Quem leva o carro, volta.</h2>
+    </div>
+    <div class="faixa">
+      <div class="trilho">
+        <figure class="cartao"><blockquote>"Douglas é mecânico de total confiança, não faz serviços desnecessários só para dizer que havia algo quando não é o caso. Sempre levo meu carro e recomendo a todos."</blockquote><cite>Guilherme Nunes · 5 estrelas</cite></figure>
+        <figure class="cartao"><blockquote>"Os pontos fortes da oficina são o atendimento, que normalmente é feito pelo Douglas, e a competência técnica dele e do outro mecânico que trabalham na oficina. Recomendo totalmente, por ser a oficina de minha confiança."</blockquote><cite>Ronaldo Lima · 5 estrelas</cite></figure>
+        <figure class="cartao"><blockquote>"Excelentes profissionais e o de uma honestidade e dedicação ímpar. Super recomendo."</blockquote><cite>Alexandre Andrade · 5 estrelas</cite></figure>
+        <figure class="cartao" aria-hidden="true"><blockquote>"Douglas é mecânico de total confiança, não faz serviços desnecessários só para dizer que havia algo quando não é o caso. Sempre levo meu carro e recomendo a todos."</blockquote><cite>Guilherme Nunes · 5 estrelas</cite></figure>
+        <figure class="cartao" aria-hidden="true"><blockquote>"Os pontos fortes da oficina são o atendimento, que normalmente é feito pelo Douglas, e a competência técnica dele e do outro mecânico que trabalham na oficina. Recomendo totalmente, por ser a oficina de minha confiança."</blockquote><cite>Ronaldo Lima · 5 estrelas</cite></figure>
+        <figure class="cartao" aria-hidden="true"><blockquote>"Excelentes profissionais e o de uma honestidade e dedicação ímpar. Super recomendo."</blockquote><cite>Alexandre Andrade · 5 estrelas</cite></figure>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="nota-google">Nota 4,8 com 52 avaliações. <a href="https://www.google.com/maps/search/?api=1&amp;query=Kadoma%20Auto%20Center&amp;query_place_id=ChIJaXkSjKFKzJQRRPsGNGzA2cI" target="_blank" rel="noopener">Ver todas no Google</a></p>
+    </div>
+  </section>
+
+  <section class="onde" id="onde">
+    <div class="wrap grade">
+      <div class="sobe">
+        <p class="rotulo"><b>05</b> · Onde fica</p>
+        <h2>No Jardim America.</h2>
+        <dl>
+          <div><dt>Endereço</dt><dd>R. Mar Del Plata, 697, Jardim America<br>São José dos Campos, SP, 12235-340</dd></div>
+          <div><dt>Telefone e WhatsApp</dt><dd><a href="tel:+5512974030765">+55 12 97403-0765</a></dd></div>
+          <div><dt>Horário</dt><dd>
+            <div class="horas">
+              <span>Segunda a sexta</span><span>8h às 18h</span>
+              <span class="fechado">Sábado e domingo</span><span class="fechado">Fechado</span>
+            </div>
+          </dd></div>
+        </dl>
+        <div class="acoes">
+          <a class="btn btn-zap" href="https://www.google.com/maps/dir/?api=1&amp;destination=R.%20Mar%20Del%20Plata%2C%20697%20-%20Jardim%20America%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012235-340" target="_blank" rel="noopener">Como chegar</a>
+          <a class="btn btn-linha" href="tel:+5512974030765">Ligar</a>
+        </div>
+      </div>
+      <div class="mapa sobe">
+        <iframe title="Mapa da Kadoma Auto Center na Rua Mar Del Plata, 697, São José dos Campos" src="https://maps.google.com/maps?q=Kadoma%20Auto%20Center%2C%20R.%20Mar%20Del%20Plata%2C%20697%2C%20Jardim%20America%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012235-340&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="duvidas" id="duvidas">
+    <div class="wrap">
+      <p class="rotulo sobe"><b>06</b> · Dúvidas</p>
+      <h2 class="sobe">Antes de levar o carro.</h2>
+      <div class="lista">
+        <details class="sobe" open>
+          <summary>Onde fica? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Na R. Mar Del Plata, 697, Jardim America, São José dos Campos, SP, CEP 12235-340.</p>
+        </details>
+        <details class="sobe">
+          <summary>Qual o horário? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>De segunda a sexta-feira, das 8h às 18h. Sábado e domingo a oficina fica fechada.</p>
+        </details>
+        <details class="sobe">
+          <summary>Faz alinhamento e balanceamento aí mesmo? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Sim, o alinhamento e o balanceamento são feitos na própria oficina. Para combinar, chame no WhatsApp pelo +55 12 97403-0765.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="fecho">
+    <div class="wrap sobe">
+      <p class="rotulo"><b>Kadoma Auto Center</b> · São José dos Campos</p>
+      <h2>Seu carro precisa de mecânico?</h2>
+      <p>Mande uma mensagem contando o que está acontecendo com o carro. Atendimento de segunda a sexta, das 8h às 18h.</p>
+      <a class="btn btn-zap" href="https://wa.me/5512974030765?text=Ol%C3%A1%2C%20vi%20o%20site%20e%20queria%20um%20or%C3%A7amento%20para%20o%20meu%20carro" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Kadoma Auto Center · R. Mar Del Plata, 697, Jardim America, São José dos Campos, SP</span>
+    <span>Página de demonstração feita por Koinonia Dev com o conteúdo público da ficha do Google.</span>
+  </div>
+</footer>
+
+<a class="btn btn-zap zap-fixo" href="https://wa.me/5512974030765?text=Ol%C3%A1%2C%20vi%20o%20site%20e%20queria%20um%20or%C3%A7amento%20para%20o%20meu%20carro" target="_blank" rel="noopener" aria-label="Chamar a Kadoma Auto Center no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.8c.2 2.6 3.2 5.6 6 6l1.2-1.3-1.8-1-.9.8c-1-.4-2.3-1.6-2.8-2.8l.8-.9-1-1.8z"/></svg>
+  WhatsApp
+</a>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.sobe');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('visto')});return;}
+  var io=new IntersectionObserver(function(ents){ents.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visto');io.unobserve(en.target);}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
