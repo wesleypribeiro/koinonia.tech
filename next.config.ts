@@ -27,6 +27,16 @@ const nextConfig: NextConfig = {
           source: "/cafe-da-ane-campos-do-jordao/cardapio/:path*",
           destination: "https://cafe-da-ane-cardapio.vercel.app/cafe-da-ane-campos-do-jordao/cardapio/:path*",
         },
+        // Esfihou!: mesmo esquema, app esfihou-cardapio (Vercel).
+        {
+          source: "/esfihou-campos-do-jordao/cardapio",
+          destination:
+            "https://esfihou-cardapio.vercel.app/esfihou-campos-do-jordao/cardapio/pedir/esfihou",
+        },
+        {
+          source: "/esfihou-campos-do-jordao/cardapio/:path*",
+          destination: "https://esfihou-cardapio.vercel.app/esfihou-campos-do-jordao/cardapio/:path*",
+        },
       ],
       afterFiles: [{ source: "/:slug", destination: "/:slug/index.html" }],
       fallback: [],
